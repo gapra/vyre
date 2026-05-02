@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10/format.json",
+  "surface": {
+    "$type": "color",
+    "$description": "Tier 3 alias: surface/background tokens. Always pair with content.* tokens.",
+    "background":      { "$value": "{color.scales.slate.1}" },
+    "subtle":          { "$value": "{color.scales.slate.2}" },
+    "muted":           { "$value": "{color.scales.slate.3}" },
+    "panel":           { "$value": "{color.primitive.white}" },
+    "card":            { "$value": "{color.primitive.white}" },
+    "popover":         { "$value": "{color.primitive.white}" },
+    "overlay":         { "$value": "{color.scales.slate.12}" },
+    "inverse":         { "$value": "{color.scales.slate.12}" },
+    "raised":          { "$value": "{color.primitive.white}" },
+    "sunken":          { "$value": "{color.scales.slate.2}" }
+  }
+}

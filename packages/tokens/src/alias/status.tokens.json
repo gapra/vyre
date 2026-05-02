@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10/format.json",
+  "status": {
+    "$type": "color",
+    "$description": "Status semantics. Each has solid + subtle + foreground triples.",
+    "success": {
+      "solid":              { "$value": "{color.scales.green.9}" },
+      "foreground":         { "$value": "{color.primitive.white}" },
+      "subtle":             { "$value": "{color.scales.green.3}" },
+      "subtle-foreground":  { "$value": "{color.scales.green.11}" },
+      "border":             { "$value": "{color.scales.green.7}" }
+    },
+    "warning": {
+      "solid":              { "$value": "{color.scales.amber.9}" },
+      "foreground":         { "$value": "{color.scales.amber.12}" },
+      "subtle":             { "$value": "{color.scales.amber.3}" },
+      "subtle-foreground":  { "$value": "{color.scales.amber.11}" },
+      "border":             { "$value": "{color.scales.amber.7}" }
+    },
+    "danger": {
+      "solid":              { "$value": "{color.scales.red.9}" },
+      "foreground":         { "$value": "{color.primitive.white}" },
+      "subtle":             { "$value": "{color.scales.red.3}" },
+      "subtle-foreground":  { "$value": "{color.scales.red.11}" },
+      "border":             { "$value": "{color.scales.red.7}" }
+    },
+    "info": {
+      "solid":              { "$value": "{color.scales.blue.9}" },
+      "foreground":         { "$value": "{color.primitive.white}" },
+      "subtle":             { "$value": "{color.scales.blue.3}" },
+      "subtle-foreground":  { "$value": "{color.scales.blue.11}" },
+      "border":             { "$value": "{color.scales.blue.7}" }
+    }
+  }
+}

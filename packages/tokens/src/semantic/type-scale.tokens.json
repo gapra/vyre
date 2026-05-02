@@ -1,0 +1,92 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10/format.json",
+  "text": {
+    "$description": "Semantic typography scale — composite text styles composed from font.* primitives.",
+    "body": {
+      "$description": "Body text — default sans-serif, normal weight.",
+      "xs":   {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.sans}", "fontSize": "{font.size.xs}", "fontWeight": "{font.weight.regular}", "lineHeight": "{font.lineHeight.normal}", "letterSpacing": "{font.letterSpacing.normal}" }
+      },
+      "sm":   {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.sans}", "fontSize": "{font.size.sm}", "fontWeight": "{font.weight.regular}", "lineHeight": "{font.lineHeight.normal}", "letterSpacing": "{font.letterSpacing.normal}" }
+      },
+      "base": {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.sans}", "fontSize": "{font.size.base}", "fontWeight": "{font.weight.regular}", "lineHeight": "{font.lineHeight.normal}", "letterSpacing": "{font.letterSpacing.normal}" }
+      },
+      "lg":   {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.sans}", "fontSize": "{font.size.lg}", "fontWeight": "{font.weight.regular}", "lineHeight": "{font.lineHeight.relaxed}", "letterSpacing": "{font.letterSpacing.normal}" }
+      },
+      "xl":   {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.sans}", "fontSize": "{font.size.xl}", "fontWeight": "{font.weight.regular}", "lineHeight": "{font.lineHeight.relaxed}", "letterSpacing": "{font.letterSpacing.normal}" }
+      }
+    },
+    "heading": {
+      "$description": "Display headings — uses display font stack, tighter tracking.",
+      "h1": {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.display}", "fontSize": "{font.size.5xl}", "fontWeight": "{font.weight.bold}", "lineHeight": "{font.lineHeight.tight}", "letterSpacing": "{font.letterSpacing.tight}" }
+      },
+      "h2": {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.display}", "fontSize": "{font.size.4xl}", "fontWeight": "{font.weight.bold}", "lineHeight": "{font.lineHeight.tight}", "letterSpacing": "{font.letterSpacing.tight}" }
+      },
+      "h3": {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.display}", "fontSize": "{font.size.3xl}", "fontWeight": "{font.weight.semibold}", "lineHeight": "{font.lineHeight.snug}", "letterSpacing": "{font.letterSpacing.tight}" }
+      },
+      "h4": {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.display}", "fontSize": "{font.size.2xl}", "fontWeight": "{font.weight.semibold}", "lineHeight": "{font.lineHeight.snug}", "letterSpacing": "{font.letterSpacing.normal}" }
+      },
+      "h5": {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.display}", "fontSize": "{font.size.xl}", "fontWeight": "{font.weight.semibold}", "lineHeight": "{font.lineHeight.snug}", "letterSpacing": "{font.letterSpacing.normal}" }
+      },
+      "h6": {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.display}", "fontSize": "{font.size.lg}", "fontWeight": "{font.weight.medium}", "lineHeight": "{font.lineHeight.snug}", "letterSpacing": "{font.letterSpacing.normal}" }
+      }
+    },
+    "label": {
+      "$description": "UI labels — medium weight for clarity at small sizes.",
+      "sm": {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.sans}", "fontSize": "{font.size.xs}", "fontWeight": "{font.weight.medium}", "lineHeight": "{font.lineHeight.none}", "letterSpacing": "{font.letterSpacing.wide}" }
+      },
+      "base": {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.sans}", "fontSize": "{font.size.sm}", "fontWeight": "{font.weight.medium}", "lineHeight": "{font.lineHeight.none}", "letterSpacing": "{font.letterSpacing.normal}" }
+      },
+      "lg": {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.sans}", "fontSize": "{font.size.base}", "fontWeight": "{font.weight.medium}", "lineHeight": "{font.lineHeight.none}", "letterSpacing": "{font.letterSpacing.normal}" }
+      }
+    },
+    "code": {
+      "$description": "Monospace code styles.",
+      "inline": {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.mono}", "fontSize": "{font.size.sm}", "fontWeight": "{font.weight.regular}", "lineHeight": "{font.lineHeight.normal}", "letterSpacing": "{font.letterSpacing.normal}" }
+      },
+      "block": {
+        "$type": "typography",
+        "$value": { "fontFamily": "{font.family.mono}", "fontSize": "{font.size.sm}", "fontWeight": "{font.weight.regular}", "lineHeight": "{font.lineHeight.relaxed}", "letterSpacing": "{font.letterSpacing.normal}" }
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "$description": "Secondary descriptive text beneath images and UI elements.",
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "{font.size.xs}", "fontWeight": "{font.weight.regular}", "lineHeight": "{font.lineHeight.normal}", "letterSpacing": "{font.letterSpacing.wide}" }
+    },
+    "overline": {
+      "$type": "typography",
+      "$description": "All-caps small label above section headings.",
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "{font.size.xs}", "fontWeight": "{font.weight.semibold}", "lineHeight": "{font.lineHeight.none}", "letterSpacing": "{font.letterSpacing.widest}" }
+    }
+  }
+}

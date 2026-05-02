@@ -1,0 +1,42 @@
+{
+  "name": "@gapra/vyre-tokens",
+  "version": "0.1.0",
+  "description": "W3C DTCG-compliant design tokens for Vyre. OKLCH-native, framework-agnostic.",
+  "author": "gapra",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/js/tokens.js",
+  "types": "./dist/js/tokens.d.ts",
+  "files": [
+    "dist/",
+    "src/",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/js/tokens.d.ts",
+      "import": "./dist/js/tokens.js"
+    },
+    "./css": "./dist/css/tokens.css",
+    "./tailwind": "./dist/tailwind/theme.css",
+    "./scss": "./dist/scss/_tokens.scss",
+    "./tokens": "./src/index.json",
+    "./palettes/*": "./src/palettes/*.tokens.json"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs",
+    "generate:palettes": "node scripts/generate-palettes.mjs"
+  },
+  "keywords": [
+    "design-tokens",
+    "w3c-dtcg",
+    "oklch",
+    "tailwind",
+    "css-variables",
+    "vyre"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

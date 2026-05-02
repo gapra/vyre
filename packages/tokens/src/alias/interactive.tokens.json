@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10/format.json",
+  "interactive": {
+    "$type": "color",
+    "$description": "Tier 3 alias: interactive states. Every bg has a -foreground pair.",
+    "primary":            { "$value": "{color.scales.indigo.9}" },
+    "primary-foreground": { "$value": "{color.primitive.white}" },
+    "primary-hover":      { "$value": "{color.scales.indigo.10}" },
+    "primary-active":     { "$value": "{color.scales.indigo.11}" },
+    "primary-subtle":     { "$value": "{color.scales.indigo.3}" },
+
+    "secondary":            { "$value": "{color.scales.slate.3}" },
+    "secondary-foreground": { "$value": "{color.scales.slate.12}" },
+    "secondary-hover":      { "$value": "{color.scales.slate.4}" },
+    "secondary-active":     { "$value": "{color.scales.slate.5}" },
+
+    "ghost":            { "$value": "{color.primitive.transparent}" },
+    "ghost-foreground": { "$value": "{color.scales.slate.12}" },
+    "ghost-hover":      { "$value": "{color.scales.slate.3}" },
+
+    "destructive":            { "$value": "{color.scales.red.9}" },
+    "destructive-foreground": { "$value": "{color.primitive.white}" },
+    "destructive-hover":      { "$value": "{color.scales.red.10}" }
+  },
+  "border": {
+    "$type": "color",
+    "subtle":      { "$value": "{color.scales.slate.4}" },
+    "default":     { "$value": "{color.scales.slate.6}" },
+    "strong":      { "$value": "{color.scales.slate.8}" },
+    "interactive": { "$value": "{color.scales.indigo.7}" },
+    "focus":       { "$value": "{color.scales.indigo.8}" }
+  },
+  "ring": {
+    "$type": "color",
+    "default": { "$value": "{color.scales.indigo.8}" },
+    "offset":  { "$value": "{color.primitive.white}" }
+  }
+}

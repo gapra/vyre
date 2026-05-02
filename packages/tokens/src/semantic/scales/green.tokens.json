@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10/format.json",
+  "color": {
+    "scales": {
+      "green": {
+        "$description": "Green semantic scale. 1–2: backgrounds; 3–5: component states; 6–8: borders; 9–10: solid; 11–12: text. Use for success and positive states.",
+        "1":  { "$type": "color", "$value": "{color.primitive.green.1}",  "$description": "App background" },
+        "2":  { "$type": "color", "$value": "{color.primitive.green.2}",  "$description": "Subtle background" },
+        "3":  { "$type": "color", "$value": "{color.primitive.green.3}",  "$description": "UI element background" },
+        "4":  { "$type": "color", "$value": "{color.primitive.green.4}",  "$description": "Hovered UI element background" },
+        "5":  { "$type": "color", "$value": "{color.primitive.green.5}",  "$description": "Active / selected UI element background" },
+        "6":  { "$type": "color", "$value": "{color.primitive.green.6}",  "$description": "Subtle border and separator" },
+        "7":  { "$type": "color", "$value": "{color.primitive.green.7}",  "$description": "UI element border and focus ring" },
+        "8":  { "$type": "color", "$value": "{color.primitive.green.8}",  "$description": "Hovered UI element border" },
+        "9":  { "$type": "color", "$value": "{color.primitive.green.9}",  "$description": "Solid background — purest hue" },
+        "10": { "$type": "color", "$value": "{color.primitive.green.10}", "$description": "Hovered solid background" },
+        "11": { "$type": "color", "$value": "{color.primitive.green.11}", "$description": "Low-contrast text" },
+        "12": { "$type": "color", "$value": "{color.primitive.green.12}", "$description": "High-contrast text" },
+        "a1":  { "$type": "color", "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 150], "alpha": 0.02 }, "$description": "Alpha: app background" },
+        "a2":  { "$type": "color", "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 150], "alpha": 0.04 }, "$description": "Alpha: subtle background" },
+        "a3":  { "$type": "color", "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 150], "alpha": 0.08 }, "$description": "Alpha: UI element background" },
+        "a4":  { "$type": "color", "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 150], "alpha": 0.14 }, "$description": "Alpha: hovered UI element background" },
+        "a5":  { "$type": "color", "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 150], "alpha": 0.22 }, "$description": "Alpha: active UI element background" },
+        "a6":  { "$type": "color", "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 150], "alpha": 0.33 }, "$description": "Alpha: subtle border" },
+        "a7":  { "$type": "color", "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 150], "alpha": 0.48 }, "$description": "Alpha: UI element border" },
+        "a8":  { "$type": "color", "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 150], "alpha": 0.64 }, "$description": "Alpha: hovered border" },
+        "a9":  { "$type": "color", "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 150], "alpha": 0.76 }, "$description": "Alpha: solid" },
+        "a10": { "$type": "color", "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 150], "alpha": 0.83 }, "$description": "Alpha: hovered solid" },
+        "a11": { "$type": "color", "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 150], "alpha": 0.90 }, "$description": "Alpha: low-contrast text" },
+        "a12": { "$type": "color", "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 150], "alpha": 0.95 }, "$description": "Alpha: high-contrast text" }
+      }
+    }
+  }
+}

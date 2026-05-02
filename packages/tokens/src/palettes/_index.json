@@ -1,0 +1,1803 @@
+{
+  "version": 1,
+  "count": 177,
+  "palettes": [
+    {
+      "id": "nordic",
+      "tags": [
+        "editorial",
+        "minimal",
+        "cool"
+      ],
+      "description": "Cool Scandinavian neutrals.",
+      "primaryHue": 220,
+      "curve": "muted"
+    },
+    {
+      "id": "paper-white",
+      "tags": [
+        "editorial",
+        "minimal",
+        "warm"
+      ],
+      "description": "Warm off-white editorial palette.",
+      "primaryHue": 60,
+      "curve": "muted"
+    },
+    {
+      "id": "newsprint",
+      "tags": [
+        "editorial",
+        "monochrome"
+      ],
+      "description": "High-contrast newsprint feel.",
+      "primaryHue": 30,
+      "curve": "muted"
+    },
+    {
+      "id": "gallery",
+      "tags": [
+        "editorial",
+        "gallery",
+        "monochrome"
+      ],
+      "description": "Pure museum gallery whites.",
+      "primaryHue": 0,
+      "curve": "muted"
+    },
+    {
+      "id": "broadsheet",
+      "tags": [
+        "editorial",
+        "classic"
+      ],
+      "description": "Classic broadsheet warmth.",
+      "primaryHue": 25,
+      "curve": "muted"
+    },
+    {
+      "id": "magazine",
+      "tags": [
+        "editorial",
+        "magazine"
+      ],
+      "description": "High-end magazine aesthetic.",
+      "primaryHue": 15,
+      "curve": "standard"
+    },
+    {
+      "id": "monograph",
+      "tags": [
+        "editorial",
+        "minimal"
+      ],
+      "description": "Architectural monograph style.",
+      "primaryHue": 240,
+      "curve": "muted"
+    },
+    {
+      "id": "museum",
+      "tags": [
+        "editorial",
+        "gallery"
+      ],
+      "description": "Museum wall placard palette.",
+      "primaryHue": 30,
+      "curve": "muted"
+    },
+    {
+      "id": "reading",
+      "tags": [
+        "editorial",
+        "reading"
+      ],
+      "description": "Optimized for long-form reading.",
+      "primaryHue": 30,
+      "curve": "muted"
+    },
+    {
+      "id": "kindle",
+      "tags": [
+        "editorial",
+        "e-ink"
+      ],
+      "description": "E-ink inspired palette.",
+      "primaryHue": 35,
+      "curve": "muted"
+    },
+    {
+      "id": "manuscript",
+      "tags": [
+        "editorial",
+        "vintage"
+      ],
+      "description": "Aged manuscript tones.",
+      "primaryHue": 40,
+      "curve": "muted"
+    },
+    {
+      "id": "swiss-grid",
+      "tags": [
+        "editorial",
+        "swiss",
+        "monochrome"
+      ],
+      "description": "International typographic style.",
+      "primaryHue": 0,
+      "curve": "standard"
+    },
+    {
+      "id": "helvetica",
+      "tags": [
+        "editorial",
+        "minimal"
+      ],
+      "description": "Pure black-and-white.",
+      "primaryHue": 0,
+      "curve": "standard"
+    },
+    {
+      "id": "wabi-sabi",
+      "tags": [
+        "editorial",
+        "organic"
+      ],
+      "description": "Imperfect organic neutrals.",
+      "primaryHue": 35,
+      "curve": "muted"
+    },
+    {
+      "id": "shoji",
+      "tags": [
+        "editorial",
+        "japanese"
+      ],
+      "description": "Japanese paper screen tones.",
+      "primaryHue": 50,
+      "curve": "pastel"
+    },
+    {
+      "id": "tech-blue",
+      "tags": [
+        "brand",
+        "corporate",
+        "tech"
+      ],
+      "description": "Classic tech company blue.",
+      "primaryHue": 240,
+      "curve": "standard"
+    },
+    {
+      "id": "fintech",
+      "tags": [
+        "brand",
+        "fintech",
+        "trust"
+      ],
+      "description": "Fintech trust-building blue.",
+      "primaryHue": 220,
+      "curve": "standard"
+    },
+    {
+      "id": "healthcare",
+      "tags": [
+        "brand",
+        "healthcare",
+        "trust"
+      ],
+      "description": "Calming healthcare teal.",
+      "primaryHue": 195,
+      "curve": "standard"
+    },
+    {
+      "id": "enterprise",
+      "tags": [
+        "brand",
+        "corporate"
+      ],
+      "description": "Enterprise B2B sober blue.",
+      "primaryHue": 210,
+      "curve": "muted"
+    },
+    {
+      "id": "startup-purple",
+      "tags": [
+        "brand",
+        "startup",
+        "tech"
+      ],
+      "description": "Modern startup purple.",
+      "primaryHue": 270,
+      "curve": "standard"
+    },
+    {
+      "id": "saas-indigo",
+      "tags": [
+        "brand",
+        "saas"
+      ],
+      "description": "Default SaaS indigo.",
+      "primaryHue": 264,
+      "curve": "standard"
+    },
+    {
+      "id": "consulting",
+      "tags": [
+        "brand",
+        "corporate",
+        "professional"
+      ],
+      "description": "Consulting firm gravitas.",
+      "primaryHue": 215,
+      "curve": "muted"
+    },
+    {
+      "id": "lawyer",
+      "tags": [
+        "brand",
+        "legal",
+        "professional"
+      ],
+      "description": "Law firm authority.",
+      "primaryHue": 230,
+      "curve": "muted"
+    },
+    {
+      "id": "accounting",
+      "tags": [
+        "brand",
+        "finance",
+        "trust"
+      ],
+      "description": "Accounting firm reliability.",
+      "primaryHue": 200,
+      "curve": "muted"
+    },
+    {
+      "id": "university",
+      "tags": [
+        "brand",
+        "education"
+      ],
+      "description": "University crimson.",
+      "primaryHue": 0,
+      "curve": "muted"
+    },
+    {
+      "id": "oxford",
+      "tags": [
+        "brand",
+        "education",
+        "classic"
+      ],
+      "description": "Oxford blue tradition.",
+      "primaryHue": 220,
+      "curve": "muted"
+    },
+    {
+      "id": "forest-green",
+      "tags": [
+        "brand",
+        "nature",
+        "finance"
+      ],
+      "description": "Forest evergreen.",
+      "primaryHue": 145,
+      "curve": "muted"
+    },
+    {
+      "id": "navy",
+      "tags": [
+        "brand",
+        "classic"
+      ],
+      "description": "Classic navy.",
+      "primaryHue": 240,
+      "curve": "muted"
+    },
+    {
+      "id": "maroon",
+      "tags": [
+        "brand",
+        "classic"
+      ],
+      "description": "Deep maroon authority.",
+      "primaryHue": 15,
+      "curve": "muted"
+    },
+    {
+      "id": "olive-corp",
+      "tags": [
+        "brand",
+        "earth"
+      ],
+      "description": "Olive corporate earth tone.",
+      "primaryHue": 90,
+      "curve": "muted"
+    },
+    {
+      "id": "aurora",
+      "tags": [
+        "atmospheric",
+        "aurora",
+        "expressive"
+      ],
+      "description": "Northern lights aurora.",
+      "primaryHue": 160,
+      "curve": "vivid"
+    },
+    {
+      "id": "sunset",
+      "tags": [
+        "atmospheric",
+        "warm"
+      ],
+      "description": "Golden hour sunset.",
+      "primaryHue": 25,
+      "curve": "vivid"
+    },
+    {
+      "id": "sunrise",
+      "tags": [
+        "atmospheric",
+        "warm"
+      ],
+      "description": "Soft sunrise pastels.",
+      "primaryHue": 35,
+      "curve": "pastel"
+    },
+    {
+      "id": "twilight",
+      "tags": [
+        "atmospheric",
+        "cool"
+      ],
+      "description": "Dusky twilight purple.",
+      "primaryHue": 270,
+      "curve": "standard"
+    },
+    {
+      "id": "midnight",
+      "tags": [
+        "atmospheric",
+        "dark"
+      ],
+      "description": "Deep midnight blue.",
+      "primaryHue": 240,
+      "curve": "vivid"
+    },
+    {
+      "id": "ocean-depth",
+      "tags": [
+        "atmospheric",
+        "cool"
+      ],
+      "description": "Deep ocean blue.",
+      "primaryHue": 215,
+      "curve": "standard"
+    },
+    {
+      "id": "tropical",
+      "tags": [
+        "atmospheric",
+        "warm"
+      ],
+      "description": "Tropical paradise.",
+      "primaryHue": 175,
+      "curve": "vivid"
+    },
+    {
+      "id": "desert",
+      "tags": [
+        "atmospheric",
+        "warm",
+        "earth"
+      ],
+      "description": "Sandy desert warmth.",
+      "primaryHue": 35,
+      "curve": "standard"
+    },
+    {
+      "id": "forest-mist",
+      "tags": [
+        "atmospheric",
+        "nature"
+      ],
+      "description": "Misty forest.",
+      "primaryHue": 155,
+      "curve": "muted"
+    },
+    {
+      "id": "mountain",
+      "tags": [
+        "atmospheric",
+        "nature"
+      ],
+      "description": "Mountain peak grays.",
+      "primaryHue": 220,
+      "curve": "muted"
+    },
+    {
+      "id": "lavender-field",
+      "tags": [
+        "atmospheric",
+        "pastel"
+      ],
+      "description": "French lavender field.",
+      "primaryHue": 280,
+      "curve": "pastel"
+    },
+    {
+      "id": "cherry-blossom",
+      "tags": [
+        "atmospheric",
+        "pastel",
+        "japanese"
+      ],
+      "description": "Sakura cherry blossom.",
+      "primaryHue": 350,
+      "curve": "pastel"
+    },
+    {
+      "id": "autumn",
+      "tags": [
+        "atmospheric",
+        "warm",
+        "seasonal"
+      ],
+      "description": "Autumn leaves.",
+      "primaryHue": 30,
+      "curve": "standard"
+    },
+    {
+      "id": "winter-frost",
+      "tags": [
+        "atmospheric",
+        "cool",
+        "seasonal"
+      ],
+      "description": "Winter frost palette.",
+      "primaryHue": 200,
+      "curve": "pastel"
+    },
+    {
+      "id": "spring-meadow",
+      "tags": [
+        "atmospheric",
+        "seasonal"
+      ],
+      "description": "Spring meadow fresh.",
+      "primaryHue": 130,
+      "curve": "pastel"
+    },
+    {
+      "id": "summer-beach",
+      "tags": [
+        "atmospheric",
+        "seasonal"
+      ],
+      "description": "Beach sun and sea.",
+      "primaryHue": 200,
+      "curve": "pastel"
+    },
+    {
+      "id": "storm",
+      "tags": [
+        "atmospheric",
+        "dramatic"
+      ],
+      "description": "Stormy gray skies.",
+      "primaryHue": 220,
+      "curve": "muted"
+    },
+    {
+      "id": "mist",
+      "tags": [
+        "atmospheric",
+        "soft"
+      ],
+      "description": "Foggy morning mist.",
+      "primaryHue": 200,
+      "curve": "muted"
+    },
+    {
+      "id": "galaxy",
+      "tags": [
+        "atmospheric",
+        "cosmic"
+      ],
+      "description": "Deep space galaxy.",
+      "primaryHue": 270,
+      "curve": "vivid"
+    },
+    {
+      "id": "nebula",
+      "tags": [
+        "atmospheric",
+        "cosmic"
+      ],
+      "description": "Cosmic nebula.",
+      "primaryHue": 295,
+      "curve": "vivid"
+    },
+    {
+      "id": "synthwave",
+      "tags": [
+        "retro",
+        "neon",
+        "vibrant"
+      ],
+      "description": "80s synthwave neon.",
+      "primaryHue": 320,
+      "curve": "vivid"
+    },
+    {
+      "id": "vaporwave",
+      "tags": [
+        "retro",
+        "pastel"
+      ],
+      "description": "Vaporwave pastels.",
+      "primaryHue": 320,
+      "curve": "pastel"
+    },
+    {
+      "id": "y2k",
+      "tags": [
+        "retro",
+        "vibrant"
+      ],
+      "description": "Y2K shiny silver-and-cyan.",
+      "primaryHue": 195,
+      "curve": "vivid"
+    },
+    {
+      "id": "eight-bit",
+      "tags": [
+        "retro",
+        "8-bit",
+        "gaming"
+      ],
+      "description": "8-bit pixel art palette.",
+      "primaryHue": 240,
+      "curve": "vivid"
+    },
+    {
+      "id": "amber-crt",
+      "tags": [
+        "retro",
+        "terminal"
+      ],
+      "description": "Amber CRT terminal.",
+      "primaryHue": 50,
+      "curve": "vivid"
+    },
+    {
+      "id": "green-crt",
+      "tags": [
+        "retro",
+        "terminal"
+      ],
+      "description": "Green CRT terminal.",
+      "primaryHue": 130,
+      "curve": "vivid"
+    },
+    {
+      "id": "memphis",
+      "tags": [
+        "retro",
+        "80s",
+        "playful"
+      ],
+      "description": "Memphis design 80s pop.",
+      "primaryHue": 350,
+      "curve": "vivid"
+    },
+    {
+      "id": "art-deco",
+      "tags": [
+        "retro",
+        "luxury",
+        "art-deco"
+      ],
+      "description": "Art Deco gold and navy.",
+      "primaryHue": 45,
+      "curve": "standard"
+    },
+    {
+      "id": "mid-century",
+      "tags": [
+        "retro",
+        "mid-century"
+      ],
+      "description": "Mid-century modern.",
+      "primaryHue": 25,
+      "curve": "muted"
+    },
+    {
+      "id": "polaroid",
+      "tags": [
+        "retro",
+        "film",
+        "photo"
+      ],
+      "description": "Faded polaroid photo.",
+      "primaryHue": 30,
+      "curve": "muted"
+    },
+    {
+      "id": "kodachrome",
+      "tags": [
+        "retro",
+        "film",
+        "photo"
+      ],
+      "description": "Vintage Kodachrome.",
+      "primaryHue": 25,
+      "curve": "standard"
+    },
+    {
+      "id": "sepia",
+      "tags": [
+        "retro",
+        "monochrome",
+        "vintage"
+      ],
+      "description": "Sepia photograph.",
+      "primaryHue": 35,
+      "curve": "muted"
+    },
+    {
+      "id": "obsidian",
+      "tags": [
+        "dark",
+        "premium",
+        "minimal"
+      ],
+      "description": "Pure black obsidian.",
+      "primaryHue": 240,
+      "curve": "standard"
+    },
+    {
+      "id": "graphite",
+      "tags": [
+        "dark",
+        "premium"
+      ],
+      "description": "Graphite professional.",
+      "primaryHue": 220,
+      "curve": "muted"
+    },
+    {
+      "id": "onyx",
+      "tags": [
+        "dark",
+        "luxury"
+      ],
+      "description": "Pure onyx luxury.",
+      "primaryHue": 0,
+      "curve": "muted"
+    },
+    {
+      "id": "midnight-blue",
+      "tags": [
+        "dark",
+        "premium"
+      ],
+      "description": "Midnight navy.",
+      "primaryHue": 230,
+      "curve": "standard"
+    },
+    {
+      "id": "wine-cellar",
+      "tags": [
+        "dark",
+        "luxury",
+        "warm"
+      ],
+      "description": "Deep wine red.",
+      "primaryHue": 350,
+      "curve": "muted"
+    },
+    {
+      "id": "gold-luxe",
+      "tags": [
+        "premium",
+        "luxury"
+      ],
+      "description": "Black + gold luxury.",
+      "primaryHue": 50,
+      "curve": "standard"
+    },
+    {
+      "id": "platinum",
+      "tags": [
+        "premium",
+        "minimal"
+      ],
+      "description": "Platinum cool premium.",
+      "primaryHue": 220,
+      "curve": "muted"
+    },
+    {
+      "id": "velvet",
+      "tags": [
+        "dark",
+        "luxury"
+      ],
+      "description": "Plush velvet purple.",
+      "primaryHue": 295,
+      "curve": "muted"
+    },
+    {
+      "id": "emerald-luxe",
+      "tags": [
+        "dark",
+        "luxury"
+      ],
+      "description": "Emerald gem luxury.",
+      "primaryHue": 155,
+      "curve": "standard"
+    },
+    {
+      "id": "sapphire",
+      "tags": [
+        "dark",
+        "luxury"
+      ],
+      "description": "Sapphire gem.",
+      "primaryHue": 240,
+      "curve": "standard"
+    },
+    {
+      "id": "ruby",
+      "tags": [
+        "dark",
+        "luxury"
+      ],
+      "description": "Ruby gem.",
+      "primaryHue": 5,
+      "curve": "standard"
+    },
+    {
+      "id": "noir",
+      "tags": [
+        "dark",
+        "cinematic"
+      ],
+      "description": "Film noir black & white.",
+      "primaryHue": 0,
+      "curve": "muted"
+    },
+    {
+      "id": "cinema",
+      "tags": [
+        "dark",
+        "cinematic"
+      ],
+      "description": "Cinematic warm dark.",
+      "primaryHue": 30,
+      "curve": "muted"
+    },
+    {
+      "id": "concrete",
+      "tags": [
+        "dark",
+        "industrial"
+      ],
+      "description": "Raw concrete.",
+      "primaryHue": 220,
+      "curve": "muted"
+    },
+    {
+      "id": "steel",
+      "tags": [
+        "dark",
+        "industrial"
+      ],
+      "description": "Brushed steel.",
+      "primaryHue": 220,
+      "curve": "muted"
+    },
+    {
+      "id": "candy",
+      "tags": [
+        "playful",
+        "pastel"
+      ],
+      "description": "Cotton candy sweetness.",
+      "primaryHue": 350,
+      "curve": "pastel"
+    },
+    {
+      "id": "bubblegum",
+      "tags": [
+        "playful",
+        "pop"
+      ],
+      "description": "Bubblegum pink pop.",
+      "primaryHue": 340,
+      "curve": "pastel"
+    },
+    {
+      "id": "rainbow-pop",
+      "tags": [
+        "playful",
+        "vibrant"
+      ],
+      "description": "Full rainbow pop.",
+      "primaryHue": 0,
+      "curve": "vivid"
+    },
+    {
+      "id": "tropical-fruit",
+      "tags": [
+        "playful",
+        "vibrant"
+      ],
+      "description": "Tropical fruit punch.",
+      "primaryHue": 50,
+      "curve": "vivid"
+    },
+    {
+      "id": "gummy-bear",
+      "tags": [
+        "playful",
+        "pastel"
+      ],
+      "description": "Gummy bear translucent.",
+      "primaryHue": 25,
+      "curve": "pastel"
+    },
+    {
+      "id": "kawaii",
+      "tags": [
+        "playful",
+        "kawaii"
+      ],
+      "description": "Kawaii cute palette.",
+      "primaryHue": 340,
+      "curve": "pastel"
+    },
+    {
+      "id": "macaron",
+      "tags": [
+        "playful",
+        "pastel"
+      ],
+      "description": "Pastel macaron.",
+      "primaryHue": 110,
+      "curve": "pastel"
+    },
+    {
+      "id": "sherbet",
+      "tags": [
+        "playful",
+        "pastel"
+      ],
+      "description": "Orange sherbet.",
+      "primaryHue": 30,
+      "curve": "pastel"
+    },
+    {
+      "id": "lollipop",
+      "tags": [
+        "playful",
+        "vibrant"
+      ],
+      "description": "Lollipop bright.",
+      "primaryHue": 350,
+      "curve": "vivid"
+    },
+    {
+      "id": "crayon",
+      "tags": [
+        "playful",
+        "vibrant"
+      ],
+      "description": "Crayon box bright.",
+      "primaryHue": 25,
+      "curve": "standard"
+    },
+    {
+      "id": "highlighter",
+      "tags": [
+        "playful",
+        "neon"
+      ],
+      "description": "Highlighter neon.",
+      "primaryHue": 130,
+      "curve": "vivid"
+    },
+    {
+      "id": "bubble-pop",
+      "tags": [
+        "playful",
+        "pop"
+      ],
+      "description": "Pop bubble bright.",
+      "primaryHue": 195,
+      "curve": "pastel"
+    },
+    {
+      "id": "unicorn",
+      "tags": [
+        "playful",
+        "pastel",
+        "fantasy"
+      ],
+      "description": "Unicorn pastel rainbow.",
+      "primaryHue": 295,
+      "curve": "pastel"
+    },
+    {
+      "id": "mermaid",
+      "tags": [
+        "playful",
+        "fantasy"
+      ],
+      "description": "Mermaid sea-and-sky.",
+      "primaryHue": 175,
+      "curve": "vivid"
+    },
+    {
+      "id": "fairy",
+      "tags": [
+        "playful",
+        "fantasy"
+      ],
+      "description": "Fairy tale pastel.",
+      "primaryHue": 320,
+      "curve": "pastel"
+    },
+    {
+      "id": "terracotta",
+      "tags": [
+        "earth",
+        "warm"
+      ],
+      "description": "Terracotta clay.",
+      "primaryHue": 25,
+      "curve": "muted"
+    },
+    {
+      "id": "sandstone",
+      "tags": [
+        "earth",
+        "warm"
+      ],
+      "description": "Sandstone neutral.",
+      "primaryHue": 50,
+      "curve": "muted"
+    },
+    {
+      "id": "moss",
+      "tags": [
+        "earth",
+        "organic"
+      ],
+      "description": "Forest moss green.",
+      "primaryHue": 130,
+      "curve": "muted"
+    },
+    {
+      "id": "sage",
+      "tags": [
+        "earth",
+        "calming"
+      ],
+      "description": "Sage herb green.",
+      "primaryHue": 110,
+      "curve": "muted"
+    },
+    {
+      "id": "oat",
+      "tags": [
+        "earth",
+        "neutral"
+      ],
+      "description": "Oat milk warmth.",
+      "primaryHue": 60,
+      "curve": "muted"
+    },
+    {
+      "id": "linen",
+      "tags": [
+        "earth",
+        "neutral"
+      ],
+      "description": "Natural linen.",
+      "primaryHue": 50,
+      "curve": "muted"
+    },
+    {
+      "id": "clay",
+      "tags": [
+        "earth",
+        "warm"
+      ],
+      "description": "Wet clay.",
+      "primaryHue": 20,
+      "curve": "muted"
+    },
+    {
+      "id": "bark",
+      "tags": [
+        "earth",
+        "wood"
+      ],
+      "description": "Tree bark brown.",
+      "primaryHue": 30,
+      "curve": "muted"
+    },
+    {
+      "id": "stone",
+      "tags": [
+        "earth",
+        "neutral"
+      ],
+      "description": "River stone gray.",
+      "primaryHue": 60,
+      "curve": "muted"
+    },
+    {
+      "id": "driftwood",
+      "tags": [
+        "earth",
+        "organic"
+      ],
+      "description": "Sun-bleached driftwood.",
+      "primaryHue": 35,
+      "curve": "muted"
+    },
+    {
+      "id": "kraft",
+      "tags": [
+        "earth",
+        "paper"
+      ],
+      "description": "Kraft paper brown.",
+      "primaryHue": 35,
+      "curve": "muted"
+    },
+    {
+      "id": "rust",
+      "tags": [
+        "earth",
+        "industrial"
+      ],
+      "description": "Iron rust orange.",
+      "primaryHue": 20,
+      "curve": "muted"
+    },
+    {
+      "id": "copper",
+      "tags": [
+        "earth",
+        "metal"
+      ],
+      "description": "Aged copper patina.",
+      "primaryHue": 30,
+      "curve": "standard"
+    },
+    {
+      "id": "bronze",
+      "tags": [
+        "earth",
+        "metal"
+      ],
+      "description": "Bronze sculpture.",
+      "primaryHue": 35,
+      "curve": "muted"
+    },
+    {
+      "id": "eucalyptus",
+      "tags": [
+        "earth",
+        "spa"
+      ],
+      "description": "Eucalyptus spa.",
+      "primaryHue": 165,
+      "curve": "muted"
+    },
+    {
+      "id": "brutalist",
+      "tags": [
+        "brutalist",
+        "bold"
+      ],
+      "description": "Brutalist black-and-red.",
+      "primaryHue": 0,
+      "curve": "vivid"
+    },
+    {
+      "id": "neo-brutalist",
+      "tags": [
+        "brutalist",
+        "bold"
+      ],
+      "description": "Neo-brutalist bright yellow.",
+      "primaryHue": 50,
+      "curve": "vivid"
+    },
+    {
+      "id": "punk",
+      "tags": [
+        "brutalist",
+        "bold"
+      ],
+      "description": "Punk pink shock.",
+      "primaryHue": 350,
+      "curve": "vivid"
+    },
+    {
+      "id": "concrete-bold",
+      "tags": [
+        "brutalist"
+      ],
+      "description": "Brutalist concrete with red.",
+      "primaryHue": 220,
+      "curve": "standard"
+    },
+    {
+      "id": "warning-tape",
+      "tags": [
+        "brutalist",
+        "safety"
+      ],
+      "description": "Construction warning tape.",
+      "primaryHue": 50,
+      "curve": "vivid"
+    },
+    {
+      "id": "caution",
+      "tags": [
+        "brutalist",
+        "safety"
+      ],
+      "description": "Industrial caution yellow.",
+      "primaryHue": 50,
+      "curve": "vivid"
+    },
+    {
+      "id": "monochrome-pop",
+      "tags": [
+        "brutalist",
+        "bold"
+      ],
+      "description": "Pure B&W with one accent.",
+      "primaryHue": 0,
+      "curve": "vivid"
+    },
+    {
+      "id": "neon-rebel",
+      "tags": [
+        "brutalist",
+        "neon"
+      ],
+      "description": "Aggressive neon green.",
+      "primaryHue": 130,
+      "curve": "vivid"
+    },
+    {
+      "id": "rave",
+      "tags": [
+        "brutalist",
+        "neon"
+      ],
+      "description": "Rave UV pink-and-green.",
+      "primaryHue": 320,
+      "curve": "vivid"
+    },
+    {
+      "id": "anti-design",
+      "tags": [
+        "brutalist",
+        "experimental"
+      ],
+      "description": "Anti-design clash.",
+      "primaryHue": 130,
+      "curve": "vivid"
+    },
+    {
+      "id": "a11y-high-contrast",
+      "tags": [
+        "accessibility",
+        "high-contrast"
+      ],
+      "description": "WCAG AAA high contrast.",
+      "primaryHue": 240,
+      "curve": "vivid"
+    },
+    {
+      "id": "a11y-low-vision",
+      "tags": [
+        "accessibility",
+        "high-contrast"
+      ],
+      "description": "Optimized for low vision.",
+      "primaryHue": 60,
+      "curve": "vivid"
+    },
+    {
+      "id": "a11y-deuteranopia",
+      "tags": [
+        "accessibility",
+        "colorblind"
+      ],
+      "description": "Red-green colorblind safe.",
+      "primaryHue": 240,
+      "curve": "standard"
+    },
+    {
+      "id": "a11y-protanopia",
+      "tags": [
+        "accessibility",
+        "colorblind"
+      ],
+      "description": "Protanopia safe.",
+      "primaryHue": 240,
+      "curve": "standard"
+    },
+    {
+      "id": "a11y-tritanopia",
+      "tags": [
+        "accessibility",
+        "colorblind"
+      ],
+      "description": "Blue-yellow colorblind safe.",
+      "primaryHue": 0,
+      "curve": "standard"
+    },
+    {
+      "id": "a11y-monochrome",
+      "tags": [
+        "accessibility",
+        "monochrome"
+      ],
+      "description": "Total color blindness safe.",
+      "primaryHue": 220,
+      "curve": "standard"
+    },
+    {
+      "id": "a11y-large-print",
+      "tags": [
+        "accessibility",
+        "large-print"
+      ],
+      "description": "Large-print friendly.",
+      "primaryHue": 220,
+      "curve": "standard"
+    },
+    {
+      "id": "a11y-low-light",
+      "tags": [
+        "accessibility",
+        "low-light"
+      ],
+      "description": "Low-light reading mode.",
+      "primaryHue": 25,
+      "curve": "muted"
+    },
+    {
+      "id": "a11y-dyslexia",
+      "tags": [
+        "accessibility",
+        "dyslexia"
+      ],
+      "description": "Dyslexia-friendly cream.",
+      "primaryHue": 50,
+      "curve": "muted"
+    },
+    {
+      "id": "a11y-print-safe",
+      "tags": [
+        "accessibility",
+        "print"
+      ],
+      "description": "Safe for B&W printing.",
+      "primaryHue": 220,
+      "curve": "standard"
+    },
+    {
+      "id": "dashboard-dense",
+      "tags": [
+        "dashboard",
+        "data"
+      ],
+      "description": "Dense data dashboard.",
+      "primaryHue": 240,
+      "curve": "standard"
+    },
+    {
+      "id": "dashboard-airy",
+      "tags": [
+        "dashboard",
+        "modern"
+      ],
+      "description": "Airy modern dashboard.",
+      "primaryHue": 240,
+      "curve": "pastel"
+    },
+    {
+      "id": "analytics",
+      "tags": [
+        "dashboard",
+        "data"
+      ],
+      "description": "Analytics teal.",
+      "primaryHue": 175,
+      "curve": "standard"
+    },
+    {
+      "id": "crm",
+      "tags": [
+        "dashboard",
+        "crm"
+      ],
+      "description": "CRM blue.",
+      "primaryHue": 215,
+      "curve": "standard"
+    },
+    {
+      "id": "admin",
+      "tags": [
+        "dashboard",
+        "admin"
+      ],
+      "description": "Admin panel sober.",
+      "primaryHue": 240,
+      "curve": "muted"
+    },
+    {
+      "id": "kanban",
+      "tags": [
+        "dashboard",
+        "project"
+      ],
+      "description": "Kanban project board.",
+      "primaryHue": 215,
+      "curve": "standard"
+    },
+    {
+      "id": "gantt",
+      "tags": [
+        "dashboard",
+        "project"
+      ],
+      "description": "Gantt timeline.",
+      "primaryHue": 240,
+      "curve": "standard"
+    },
+    {
+      "id": "reporting",
+      "tags": [
+        "dashboard",
+        "data"
+      ],
+      "description": "Reporting professional.",
+      "primaryHue": 220,
+      "curve": "muted"
+    },
+    {
+      "id": "kpi",
+      "tags": [
+        "dashboard",
+        "data"
+      ],
+      "description": "KPI tracker.",
+      "primaryHue": 195,
+      "curve": "standard"
+    },
+    {
+      "id": "finance-dash",
+      "tags": [
+        "dashboard",
+        "finance"
+      ],
+      "description": "Finance dashboard.",
+      "primaryHue": 215,
+      "curve": "muted"
+    },
+    {
+      "id": "logistics",
+      "tags": [
+        "dashboard",
+        "logistics"
+      ],
+      "description": "Logistics warm operational.",
+      "primaryHue": 30,
+      "curve": "standard"
+    },
+    {
+      "id": "devops",
+      "tags": [
+        "dashboard",
+        "tech"
+      ],
+      "description": "DevOps terminal-ish.",
+      "primaryHue": 130,
+      "curve": "standard"
+    },
+    {
+      "id": "monitoring",
+      "tags": [
+        "dashboard",
+        "ops"
+      ],
+      "description": "Monitoring with strong status colors.",
+      "primaryHue": 145,
+      "curve": "standard"
+    },
+    {
+      "id": "data-warehouse",
+      "tags": [
+        "dashboard",
+        "data"
+      ],
+      "description": "Data warehouse.",
+      "primaryHue": 220,
+      "curve": "standard"
+    },
+    {
+      "id": "observability",
+      "tags": [
+        "dashboard",
+        "tech"
+      ],
+      "description": "Observability platform.",
+      "primaryHue": 270,
+      "curve": "standard"
+    },
+    {
+      "id": "ecom-fashion",
+      "tags": [
+        "ecommerce",
+        "fashion"
+      ],
+      "description": "Fashion B&W with pink.",
+      "primaryHue": 0,
+      "curve": "standard"
+    },
+    {
+      "id": "ecom-luxury",
+      "tags": [
+        "ecommerce",
+        "luxury"
+      ],
+      "description": "Luxury ecom cream.",
+      "primaryHue": 30,
+      "curve": "muted"
+    },
+    {
+      "id": "ecom-fresh",
+      "tags": [
+        "ecommerce",
+        "food"
+      ],
+      "description": "Fresh grocery green.",
+      "primaryHue": 145,
+      "curve": "pastel"
+    },
+    {
+      "id": "ecom-toys",
+      "tags": [
+        "ecommerce",
+        "kids"
+      ],
+      "description": "Toys & kids fun.",
+      "primaryHue": 25,
+      "curve": "vivid"
+    },
+    {
+      "id": "ecom-tech",
+      "tags": [
+        "ecommerce",
+        "tech"
+      ],
+      "description": "Tech ecom blue.",
+      "primaryHue": 240,
+      "curve": "standard"
+    },
+    {
+      "id": "ecom-beauty",
+      "tags": [
+        "ecommerce",
+        "beauty"
+      ],
+      "description": "Beauty rose pastel.",
+      "primaryHue": 350,
+      "curve": "pastel"
+    },
+    {
+      "id": "ecom-outdoor",
+      "tags": [
+        "ecommerce",
+        "outdoor"
+      ],
+      "description": "Outdoor adventure green.",
+      "primaryHue": 130,
+      "curve": "muted"
+    },
+    {
+      "id": "marketing-bold",
+      "tags": [
+        "marketing",
+        "cta"
+      ],
+      "description": "Bold conversion red.",
+      "primaryHue": 5,
+      "curve": "vivid"
+    },
+    {
+      "id": "marketing-trust",
+      "tags": [
+        "marketing",
+        "trust"
+      ],
+      "description": "Trust-building blue.",
+      "primaryHue": 215,
+      "curve": "standard"
+    },
+    {
+      "id": "marketing-friendly",
+      "tags": [
+        "marketing",
+        "friendly"
+      ],
+      "description": "Friendly approachable.",
+      "primaryHue": 30,
+      "curve": "pastel"
+    },
+    {
+      "id": "calm",
+      "tags": [
+        "mood",
+        "calming"
+      ],
+      "description": "Calming meditation blue.",
+      "primaryHue": 200,
+      "curve": "muted"
+    },
+    {
+      "id": "focus",
+      "tags": [
+        "mood",
+        "focus"
+      ],
+      "description": "Deep focus environment.",
+      "primaryHue": 215,
+      "curve": "muted"
+    },
+    {
+      "id": "energetic",
+      "tags": [
+        "mood",
+        "energy"
+      ],
+      "description": "High-energy orange.",
+      "primaryHue": 25,
+      "curve": "vivid"
+    },
+    {
+      "id": "cozy",
+      "tags": [
+        "mood",
+        "warm"
+      ],
+      "description": "Cozy fireplace warm.",
+      "primaryHue": 25,
+      "curve": "muted"
+    },
+    {
+      "id": "fresh",
+      "tags": [
+        "mood",
+        "fresh"
+      ],
+      "description": "Fresh mint clean.",
+      "primaryHue": 165,
+      "curve": "standard"
+    },
+    {
+      "id": "serene",
+      "tags": [
+        "mood",
+        "calming"
+      ],
+      "description": "Serene sky blue.",
+      "primaryHue": 195,
+      "curve": "pastel"
+    },
+    {
+      "id": "romantic",
+      "tags": [
+        "mood",
+        "romantic"
+      ],
+      "description": "Romantic dusty rose.",
+      "primaryHue": 350,
+      "curve": "pastel"
+    },
+    {
+      "id": "mysterious",
+      "tags": [
+        "mood",
+        "dark"
+      ],
+      "description": "Mysterious deep purple.",
+      "primaryHue": 270,
+      "curve": "muted"
+    },
+    {
+      "id": "optimistic",
+      "tags": [
+        "mood",
+        "happy"
+      ],
+      "description": "Optimistic sunshine.",
+      "primaryHue": 50,
+      "curve": "pastel"
+    },
+    {
+      "id": "meditative",
+      "tags": [
+        "mood",
+        "calming"
+      ],
+      "description": "Meditative sage.",
+      "primaryHue": 110,
+      "curve": "muted"
+    },
+    {
+      "id": "cyberpunk",
+      "tags": [
+        "theme",
+        "cyberpunk"
+      ],
+      "description": "Cyberpunk pink-cyan.",
+      "primaryHue": 320,
+      "curve": "vivid"
+    },
+    {
+      "id": "steampunk",
+      "tags": [
+        "theme",
+        "steampunk"
+      ],
+      "description": "Steampunk brass-and-leather.",
+      "primaryHue": 30,
+      "curve": "muted"
+    },
+    {
+      "id": "cottagecore",
+      "tags": [
+        "theme",
+        "cottagecore"
+      ],
+      "description": "Cottagecore meadow.",
+      "primaryHue": 130,
+      "curve": "pastel"
+    },
+    {
+      "id": "darkacademia",
+      "tags": [
+        "theme",
+        "academic"
+      ],
+      "description": "Dark academia leather.",
+      "primaryHue": 30,
+      "curve": "muted"
+    },
+    {
+      "id": "minimalcore",
+      "tags": [
+        "theme",
+        "minimal"
+      ],
+      "description": "Minimalcore stark.",
+      "primaryHue": 0,
+      "curve": "muted"
+    },
+    {
+      "id": "maximalist",
+      "tags": [
+        "theme",
+        "maximalist"
+      ],
+      "description": "Maximalist clash.",
+      "primaryHue": 25,
+      "curve": "vivid"
+    },
+    {
+      "id": "biophilic",
+      "tags": [
+        "theme",
+        "nature"
+      ],
+      "description": "Biophilic plant palette.",
+      "primaryHue": 130,
+      "curve": "muted"
+    },
+    {
+      "id": "futurist",
+      "tags": [
+        "theme",
+        "futurist"
+      ],
+      "description": "Sci-fi futurist.",
+      "primaryHue": 195,
+      "curve": "vivid"
+    },
+    {
+      "id": "utopia",
+      "tags": [
+        "theme",
+        "futurist"
+      ],
+      "description": "Utopian clean future.",
+      "primaryHue": 195,
+      "curve": "pastel"
+    },
+    {
+      "id": "dystopia",
+      "tags": [
+        "theme",
+        "dark"
+      ],
+      "description": "Dystopian rust + concrete.",
+      "primaryHue": 25,
+      "curve": "muted"
+    },
+    {
+      "id": "meditative-zen",
+      "tags": [
+        "theme",
+        "zen"
+      ],
+      "description": "Zen garden palette.",
+      "primaryHue": 60,
+      "curve": "muted"
+    },
+    {
+      "id": "scandi",
+      "tags": [
+        "theme",
+        "scandi"
+      ],
+      "description": "Hygge Scandinavian.",
+      "primaryHue": 220,
+      "curve": "muted"
+    },
+    {
+      "id": "mediterranean",
+      "tags": [
+        "theme",
+        "mediterranean"
+      ],
+      "description": "Mediterranean sea + terracotta.",
+      "primaryHue": 200,
+      "curve": "standard"
+    },
+    {
+      "id": "arabian",
+      "tags": [
+        "theme",
+        "arabian"
+      ],
+      "description": "Arabian gold + violet.",
+      "primaryHue": 25,
+      "curve": "standard"
+    },
+    {
+      "id": "african-savanna",
+      "tags": [
+        "theme",
+        "african"
+      ],
+      "description": "Savanna earth tones.",
+      "primaryHue": 25,
+      "curve": "muted"
+    }
+  ]
+}

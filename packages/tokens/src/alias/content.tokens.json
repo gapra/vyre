@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10/format.json",
+  "content": {
+    "$type": "color",
+    "$description": "Tier 3 alias: foreground/text tokens. Pair with surface.* tokens for guaranteed contrast.",
+    "primary":    { "$value": "{color.scales.slate.12}" },
+    "secondary":  { "$value": "{color.scales.slate.11}" },
+    "tertiary":   { "$value": "{color.scales.slate.10}" },
+    "muted":      { "$value": "{color.scales.slate.9}" },
+    "disabled":   { "$value": "{color.scales.slate.8}" },
+    "inverse":    { "$value": "{color.scales.slate.1}" },
+    "link":       { "$value": "{color.scales.indigo.11}" },
+    "link-hover": { "$value": "{color.scales.indigo.10}" }
+  }
+}

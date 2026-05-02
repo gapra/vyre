@@ -1,0 +1,37 @@
+{
+  "name": "@gapra/vyre",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Vyre — AI-native frontend design system. 50+ UI styles, 150+ palettes, 90+ UX rules.",
+  "author": "gapra",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:tokens": "pnpm --filter @gapra/vyre-tokens build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "publish:all": "pnpm -r publish --access public --no-git-checks"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  },
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "ai-skill",
+    "claude-skill",
+    "agent-skill",
+    "ui",
+    "ux",
+    "frontend",
+    "tailwind",
+    "react",
+    "vue",
+    "svelte"
+  ]
+}
