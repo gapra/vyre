@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10/format.json",
+  "$description": "Light mode theme modifier. Explicitly declares default light values so consumers can toggle via [data-theme='light'].",
+  "$extensions": {
+    "com.vyre.theme": {
+      "id": "light",
+      "type": "color-scheme",
+      "selector": ":root, [data-theme='light']",
+      "description": "Default light theme. All alias tokens already target these values."
+    }
+  },
+  "surface": {
+    "$type": "color",
+    "background": { "$value": "{color.scales.slate.1}" },
+    "subtle":     { "$value": "{color.scales.slate.2}" },
+    "muted":      { "$value": "{color.scales.slate.3}" },
+    "panel":      { "$value": "{color.primitive.white}" },
+    "card":       { "$value": "{color.primitive.white}" },
+    "popover":    { "$value": "{color.primitive.white}" },
+    "overlay":    { "$value": "{color.scales.slate.12}" },
+    "inverse":    { "$value": "{color.scales.slate.12}" },
+    "raised":     { "$value": "{color.primitive.white}" },
+    "sunken":     { "$value": "{color.scales.slate.2}" }
+  },
+  "content": {
+    "$type": "color",
+    "primary":    { "$value": "{color.scales.slate.12}" },
+    "secondary":  { "$value": "{color.scales.slate.11}" },
+    "tertiary":   { "$value": "{color.scales.slate.10}" },
+    "muted":      { "$value": "{color.scales.slate.9}" },
+    "disabled":   { "$value": "{color.scales.slate.8}" },
+    "inverse":    { "$value": "{color.scales.slate.1}" },
+    "link":       { "$value": "{color.scales.indigo.11}" },
+    "link-hover": { "$value": "{color.scales.indigo.10}" }
+  },
+  "interactive": {
+    "$type": "color",
+    "primary":              { "$value": "{color.scales.indigo.9}" },
+    "primary-foreground":   { "$value": "{color.primitive.white}" },
+    "primary-hover":        { "$value": "{color.scales.indigo.10}" },
+    "primary-active":       { "$value": "{color.scales.indigo.11}" },
+    "primary-subtle":       { "$value": "{color.scales.indigo.3}" },
+    "secondary":            { "$value": "{color.scales.slate.3}" },
+    "secondary-foreground": { "$value": "{color.scales.slate.12}" },
+    "secondary-hover":      { "$value": "{color.scales.slate.4}" },
+    "secondary-active":     { "$value": "{color.scales.slate.5}" },
+    "ghost":                { "$value": "{color.primitive.transparent}" },
+    "ghost-foreground":     { "$value": "{color.scales.slate.12}" },
+    "ghost-hover":          { "$value": "{color.scales.slate.3}" },
+    "destructive":          { "$value": "{color.scales.red.9}" },
+    "destructive-foreground": { "$value": "{color.primitive.white}" },
+    "destructive-hover":    { "$value": "{color.scales.red.10}" }
+  },
+  "border": {
+    "$type": "color",
+    "subtle":      { "$value": "{color.scales.slate.4}" },
+    "default":     { "$value": "{color.scales.slate.6}" },
+    "strong":      { "$value": "{color.scales.slate.8}" },
+    "interactive": { "$value": "{color.scales.indigo.7}" },
+    "focus":       { "$value": "{color.scales.indigo.8}" }
+  },
+  "ring": {
+    "$type": "color",
+    "default": { "$value": "{color.scales.indigo.8}" },
+    "offset":  { "$value": "{color.primitive.white}" }
+  }
+}

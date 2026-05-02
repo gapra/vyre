@@ -1,0 +1,58 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "scripts/**", "package.json", "tsconfig*.json"],
+      "outputs": ["dist/**"]
+    },
+
+    "build:tokens": {
+      "dependsOn": [],
+      "inputs": ["src/**/*.tokens.json", "scripts/build.mjs"],
+      "outputs": ["dist/**"]
+    },
+
+    "generate:palettes": {
+      "dependsOn": [],
+      "inputs": ["scripts/generate-palettes.mjs"],
+      "outputs": ["src/palettes/**"]
+    },
+
+    "validate": {
+      "dependsOn": ["build"],
+      "inputs": ["dist/**", "src/**/*.tokens.json", "scripts/validate.mjs"],
+      "outputs": [],
+      "cache": false
+    },
+
+    "lint": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "scripts/**"],
+      "outputs": []
+    },
+
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "test/**", "*.test.*"],
+      "outputs": [],
+      "cache": false
+    },
+
+    "dev": {
+      "dependsOn": ["^build"],
+      "persistent": true,
+      "cache": false
+    },
+
+    "publish": {
+      "dependsOn": ["build", "test", "validate"],
+      "cache": false
+    },
+
+    "clean": {
+      "cache": false
+    }
+  }
+}

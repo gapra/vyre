@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10/format.json",
+  "$description": "Deuteranopia/protanopia-safe theme modifier. Both conditions cause red-green confusion (8% of males). Substitutes green success with blue and adjusts status hues so all four states are distinguishable by luminance AND hue even with red-green CVD. Layer on light or dark.",
+  "$extensions": {
+    "com.vyre.theme": {
+      "id": "colorblind",
+      "type": "color-vision-deficiency",
+      "selector": "[data-vision='colorblind']",
+      "cvd": ["deuteranopia", "protanopia", "deuteranomaly", "protanomaly"],
+      "description": "Red-green CVD safe: success→blue, danger→red-orange, distinct by luminance and hue."
+    }
+  },
+  "status": {
+    "$type": "color",
+    "$description": "Strategy: use blue (success), amber (warning), red-orange (danger), violet (info). Each has a distinct OKLCH lightness AND hue so luminance-only perception still differs.",
+    "success": {
+      "$description": "Green is confused with red. Substitute blue (hue 230) — clearly distinct from orange/red.",
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.52, 0.185, 230] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.95, 0.038, 230] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.36, 0.155, 230] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.44, 0.140, 230] } }
+    },
+    "warning": {
+      "$description": "Amber/yellow stays — deuteranopes perceive yellow well (it has high luminance).",
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.78, 0.130, 75] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [0.14, 0.020, 75] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.97, 0.040, 75] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.40, 0.110, 75] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.60, 0.110, 75] } }
+    },
+    "danger": {
+      "$description": "Pure red can look brown/olive to deuteranopes. Shift to red-orange (hue 18) with slightly higher chroma — distinct by both hue and luminance from blue success.",
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.60, 0.225, 18] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.96, 0.050, 18] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.40, 0.190, 18] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.50, 0.175, 18] } }
+    },
+    "info": {
+      "$description": "Violet (hue 300) is the fourth distinguishable hue for red-green CVD users.",
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.50, 0.220, 300] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.95, 0.042, 300] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.36, 0.180, 300] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.42, 0.160, 300] } }
+    }
+  },
+  "interactive": {
+    "$type": "color",
+    "$description": "Interactive primary shifts from indigo (264) to a slightly more violet hue (280) to avoid green confusion in hover/active states.",
+    "primary":              { "$value": { "colorSpace": "oklch", "components": [0.55, 0.220, 280] } },
+    "primary-foreground":   { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+    "primary-hover":        { "$value": { "colorSpace": "oklch", "components": [0.49, 0.215, 280] } },
+    "primary-active":       { "$value": { "colorSpace": "oklch", "components": [0.43, 0.185, 280] } },
+    "primary-subtle":       { "$value": { "colorSpace": "oklch", "components": [0.94, 0.040, 280] } }
+  }
+}

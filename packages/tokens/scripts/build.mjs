@@ -206,12 +206,94 @@ function emitDts() {
   ].join('\n');
 }
 
+// --- Walk excluding a subdirectory ---
+async function walkExcluding(dir, excludeDir) {
+  const entries = await readdir(dir, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      if (full === excludeDir) continue;
+      files.push(...await walkExcluding(full, excludeDir));
+    } else if (entry.name.endsWith('.tokens.json')) {
+      files.push(full);
+    }
+  }
+  return files;
+}
+
+// --- Emit per-theme CSS ---
+function emitThemeCss(tokens, selector) {
+  const lines = [
+    `/* Vyre theme override — generated. Do not edit. */`,
+    `${selector} {`,
+  ];
+  for (const t of tokens) {
+    lines.push(`  ${cssName(t.path)}: ${formatValue(t)};`);
+  }
+  lines.push('}', '');
+  return lines.join('\n');
+}
+
+// --- Build all theme modifier files ---
+async function buildThemes(baseTokens) {
+  const THEMES_DIR = join(SRC, 'themes');
+  const THEMES_OUT = join(DIST, 'css', 'themes');
+  await mkdir(THEMES_OUT, { recursive: true });
+
+  // Build a ref-map from base tokens for resolving {aliases} in themes
+  const baseMap = new Map(baseTokens.map(t => [t.path.join('.'), t]));
+
+  let entries;
+  try {
+    entries = await readdir(THEMES_DIR, { withFileTypes: true });
+  } catch {
+    return; // themes dir absent — skip silently
+  }
+
+  for (const entry of entries) {
+    if (!entry.name.endsWith('.tokens.json')) continue;
+    const themeId = entry.name.replace('.tokens.json', '');
+    const json = JSON.parse(await readFile(join(THEMES_DIR, entry.name), 'utf8'));
+
+    const selector = json.$extensions?.['com.vyre.theme']?.selector ?? `[data-theme='${themeId}']`;
+
+    // Flatten only the token overrides (skip $ metadata keys)
+    const themeTokens = flatten(json);
+
+    // Resolve refs: try theme-local first, fall back to base
+    const combinedMap = new Map([...baseMap]);
+    for (const t of themeTokens) combinedMap.set(t.path.join('.'), t);
+
+    const seen = new Set();
+    function resolveOne(token) {
+      if (typeof token.value !== 'string') return token.value;
+      const match = token.value.match(/^\{([^}]+)\}$/);
+      if (!match) return token.value;
+      const refPath = match[1];
+      if (seen.has(refPath)) throw new Error(`Circular ref in theme ${themeId}: ${refPath}`);
+      seen.add(refPath);
+      const target = combinedMap.get(refPath);
+      if (!target) throw new Error(`Unresolved ref in theme ${themeId}: ${refPath}`);
+      const result = resolveOne(target);
+      seen.delete(refPath);
+      return result;
+    }
+
+    const resolved = themeTokens.map(t => ({ ...t, resolved: resolveOne(t) }));
+    const css = emitThemeCss(resolved, selector);
+    await writeFile(join(THEMES_OUT, `${themeId}.css`), css);
+    console.log(`  ✓ dist/css/themes/${themeId}.css  (${selector})`);
+  }
+}
+
 // --- Main ---
 async function main() {
   console.log('Building Vyre tokens…');
 
-  const files = await walk(SRC);
-  console.log(`  Found ${files.length} token files`);
+  const THEMES_DIR = join(SRC, 'themes');
+  const files = await walkExcluding(SRC, THEMES_DIR);
+  console.log(`  Found ${files.length} token files (themes processed separately)`);
 
   const allTokens = [];
   for (const file of files) {
@@ -239,6 +321,11 @@ async function main() {
   console.log('  ✓ dist/scss/_tokens.scss');
   console.log('  ✓ dist/js/tokens.js');
   console.log('  ✓ dist/js/tokens.d.ts');
+
+  // Build per-theme CSS overrides
+  console.log('Building themes…');
+  await buildThemes(resolved);
+
   console.log('Done.');
 }
 

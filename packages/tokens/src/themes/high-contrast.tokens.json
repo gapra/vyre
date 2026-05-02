@@ -1,0 +1,102 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10/format.json",
+  "$description": "High-contrast theme modifier. Targets WCAG AAA (contrast ratio ≥7:1) and APCA Lc 90 for body text. Additive with light or dark — apply both [data-theme='light'][data-contrast='high'] or [data-theme='dark'][data-contrast='high'].",
+  "$extensions": {
+    "com.vyre.theme": {
+      "id": "high-contrast",
+      "type": "contrast-preference",
+      "selector": "[data-contrast='high']",
+      "description": "WCAG AAA / APCA Lc 90 contrast boost. Layer on top of light or dark."
+    }
+  },
+  "surface": {
+    "$type": "color",
+    "$description": "Pure white/black surfaces maximize contrast baseline.",
+    "background": { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+    "subtle":     { "$value": { "colorSpace": "oklch", "components": [0.97, 0.002, 247] } },
+    "muted":      { "$value": { "colorSpace": "oklch", "components": [0.94, 0.004, 247] } },
+    "panel":      { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+    "card":       { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+    "popover":    { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+    "overlay":    { "$value": { "colorSpace": "oklch", "components": [0.0, 0, 0], "alpha": 0.75 } },
+    "inverse":    { "$value": { "colorSpace": "oklch", "components": [0.0, 0, 0] } },
+    "raised":     { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+    "sunken":     { "$value": { "colorSpace": "oklch", "components": [0.95, 0.003, 247] } }
+  },
+  "content": {
+    "$type": "color",
+    "$description": "Pure black text on white: Lc 106 (APCA). No decorative dimming.",
+    "primary":    { "$value": { "colorSpace": "oklch", "components": [0.0, 0, 0] } },
+    "secondary":  { "$value": { "colorSpace": "oklch", "components": [0.08, 0.010, 247] } },
+    "tertiary":   { "$value": { "colorSpace": "oklch", "components": [0.14, 0.015, 247] } },
+    "muted":      { "$value": { "colorSpace": "oklch", "components": [0.20, 0.018, 247] } },
+    "disabled":   { "$value": { "colorSpace": "oklch", "components": [0.30, 0.020, 247] }, "$description": "Still readable; disabled elements retain minimum AAA contrast" },
+    "inverse":    { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+    "link":       { "$value": { "colorSpace": "oklch", "components": [0.28, 0.180, 264] }, "$description": "Dark indigo link — passes AAA on white" },
+    "link-hover": { "$value": { "colorSpace": "oklch", "components": [0.18, 0.150, 264] } }
+  },
+  "interactive": {
+    "$type": "color",
+    "primary":              { "$value": { "colorSpace": "oklch", "components": [0.28, 0.200, 264] }, "$description": "Darkened indigo — AAA on white bg" },
+    "primary-foreground":   { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+    "primary-hover":        { "$value": { "colorSpace": "oklch", "components": [0.20, 0.180, 264] } },
+    "primary-active":       { "$value": { "colorSpace": "oklch", "components": [0.14, 0.150, 264] } },
+    "primary-subtle":       { "$value": { "colorSpace": "oklch", "components": [0.92, 0.030, 264] } },
+    "secondary":            { "$value": { "colorSpace": "oklch", "components": [0.0, 0, 0] } },
+    "secondary-foreground": { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+    "secondary-hover":      { "$value": { "colorSpace": "oklch", "components": [0.10, 0.012, 247] } },
+    "secondary-active":     { "$value": { "colorSpace": "oklch", "components": [0.16, 0.015, 247] } },
+    "ghost":                { "$value": { "colorSpace": "oklch", "components": [0, 0, 0], "alpha": 0 } },
+    "ghost-foreground":     { "$value": { "colorSpace": "oklch", "components": [0.0, 0, 0] } },
+    "ghost-hover":          { "$value": { "colorSpace": "oklch", "components": [0.92, 0.005, 247] } },
+    "destructive":          { "$value": { "colorSpace": "oklch", "components": [0.38, 0.200, 25] }, "$description": "Darkened red — AAA on white" },
+    "destructive-foreground": { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+    "destructive-hover":    { "$value": { "colorSpace": "oklch", "components": [0.28, 0.180, 25] } }
+  },
+  "border": {
+    "$type": "color",
+    "$description": "3px-equivalent visual weight via dark borders.",
+    "subtle":      { "$value": { "colorSpace": "oklch", "components": [0.40, 0.020, 247] } },
+    "default":     { "$value": { "colorSpace": "oklch", "components": [0.20, 0.018, 247] } },
+    "strong":      { "$value": { "colorSpace": "oklch", "components": [0.0, 0, 0] } },
+    "interactive": { "$value": { "colorSpace": "oklch", "components": [0.28, 0.200, 264] } },
+    "focus":       { "$value": { "colorSpace": "oklch", "components": [0.0, 0, 0] }, "$description": "Black focus ring — universally visible" }
+  },
+  "ring": {
+    "$type": "color",
+    "default": { "$value": { "colorSpace": "oklch", "components": [0.0, 0, 0] } },
+    "offset":  { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } }
+  },
+  "status": {
+    "$type": "color",
+    "$description": "Status colors darkened to pass AAA on white.",
+    "success": {
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.32, 0.130, 150] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.96, 0.020, 150] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.22, 0.115, 150] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.32, 0.130, 150] } }
+    },
+    "warning": {
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.48, 0.120, 55] }, "$description": "Amber shifted to gold-brown for AAA" },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.97, 0.030, 75] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.28, 0.100, 55] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.48, 0.120, 55] } }
+    },
+    "danger": {
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.36, 0.200, 25] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.97, 0.025, 25] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.26, 0.175, 25] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.36, 0.200, 25] } }
+    },
+    "info": {
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.30, 0.160, 230] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.96, 0.022, 230] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.22, 0.140, 230] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.30, 0.160, 230] } }
+    }
+  }
+}

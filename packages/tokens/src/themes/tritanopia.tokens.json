@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10/format.json",
+  "$description": "Tritanopia-safe theme modifier. Tritanopia: inability to perceive short-wavelength blue (OPN1SW gene). Removes blue/yellow confusion by substituting blue-based status tokens with violet/magenta equivalents. Interactive indigo is safe (perceived as purple). Layer on light or dark.",
+  "$extensions": {
+    "com.vyre.theme": {
+      "id": "tritanopia",
+      "type": "color-vision-deficiency",
+      "selector": "[data-vision='tritanopia']",
+      "description": "Replaces blue-based info and yellow-based warning with tritanopia-distinguishable hues."
+    }
+  },
+  "status": {
+    "$type": "color",
+    "$description": "Key changes: info → violet (hue 300), warning → red-orange (hue 30). Success green and danger red are unaffected — tritanopes distinguish red from green well.",
+    "success": {
+      "solid":             { "$value": "{color.scales.green.9}" },
+      "foreground":        { "$value": "{color.primitive.white}" },
+      "subtle":            { "$value": "{color.scales.green.3}" },
+      "subtle-foreground": { "$value": "{color.scales.green.11}" },
+      "border":            { "$value": "{color.scales.green.7}" }
+    },
+    "warning": {
+      "$description": "Amber/yellow is confused with blue by tritanopes. Substitute red-orange (hue 30).",
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.62, 0.185, 30] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.96, 0.040, 30] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.38, 0.160, 30] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.52, 0.150, 30] } }
+    },
+    "danger": {
+      "solid":             { "$value": "{color.scales.red.9}" },
+      "foreground":        { "$value": "{color.primitive.white}" },
+      "subtle":            { "$value": "{color.scales.red.3}" },
+      "subtle-foreground": { "$value": "{color.scales.red.11}" },
+      "border":            { "$value": "{color.scales.red.7}" }
+    },
+    "info": {
+      "$description": "Blue is poorly perceived by tritanopes. Substitute violet (hue 300) — clearly distinct from green, orange, and red.",
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.52, 0.215, 300] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [1.0, 0, 0] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.95, 0.040, 300] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.38, 0.175, 300] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.44, 0.155, 300] } }
+    }
+  }
+}

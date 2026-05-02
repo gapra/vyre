@@ -1,0 +1,99 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10/format.json",
+  "$description": "Dark mode theme modifier. Inverts lightness ramps while preserving chroma/hue. Apply selector [data-theme='dark'] or .dark.",
+  "$extensions": {
+    "com.vyre.theme": {
+      "id": "dark",
+      "type": "color-scheme",
+      "selector": "[data-theme='dark'], .dark"
+    }
+  },
+  "surface": {
+    "$type": "color",
+    "$description": "Dark surfaces: steps run 0.09–0.20 L in OKLCH (near-black → elevated card).",
+    "background": { "$value": { "colorSpace": "oklch", "components": [0.11, 0.012, 247] }, "$description": "App background" },
+    "subtle":     { "$value": { "colorSpace": "oklch", "components": [0.14, 0.014, 247] }, "$description": "Subtle background" },
+    "muted":      { "$value": { "colorSpace": "oklch", "components": [0.18, 0.016, 247] }, "$description": "Muted / section bg" },
+    "panel":      { "$value": { "colorSpace": "oklch", "components": [0.15, 0.014, 247] }, "$description": "Panel / sidebar" },
+    "card":       { "$value": { "colorSpace": "oklch", "components": [0.16, 0.015, 247] }, "$description": "Card surface" },
+    "popover":    { "$value": { "colorSpace": "oklch", "components": [0.19, 0.016, 247] }, "$description": "Popover / dropdown" },
+    "overlay":    { "$value": { "colorSpace": "oklch", "components": [0.06, 0.008, 247], "alpha": 0.85 }, "$description": "Modal scrim" },
+    "inverse":    { "$value": { "colorSpace": "oklch", "components": [0.97, 0.003, 247] }, "$description": "Inverted surface (near-white on dark bg)" },
+    "raised":     { "$value": { "colorSpace": "oklch", "components": [0.20, 0.017, 247] }, "$description": "Elevated / floating" },
+    "sunken":     { "$value": { "colorSpace": "oklch", "components": [0.09, 0.009, 247] }, "$description": "Recessed / input bg" }
+  },
+  "content": {
+    "$type": "color",
+    "$description": "Dark-mode text: steps run 0.45–0.96 L (disabled → primary).",
+    "primary":    { "$value": { "colorSpace": "oklch", "components": [0.96, 0.004, 247] }, "$description": "High-contrast text" },
+    "secondary":  { "$value": { "colorSpace": "oklch", "components": [0.86, 0.012, 247] }, "$description": "Secondary text" },
+    "tertiary":   { "$value": { "colorSpace": "oklch", "components": [0.74, 0.020, 247] }, "$description": "Tertiary / hint" },
+    "muted":      { "$value": { "colorSpace": "oklch", "components": [0.66, 0.025, 247] }, "$description": "Muted / placeholder" },
+    "disabled":   { "$value": { "colorSpace": "oklch", "components": [0.45, 0.022, 247] }, "$description": "Disabled state" },
+    "inverse":    { "$value": { "colorSpace": "oklch", "components": [0.13, 0.015, 247] }, "$description": "Inverted text (near-black)" },
+    "link":       { "$value": { "colorSpace": "oklch", "components": [0.80, 0.150, 264] }, "$description": "Link (lighter indigo for dark bg)" },
+    "link-hover": { "$value": { "colorSpace": "oklch", "components": [0.86, 0.140, 264] } }
+  },
+  "interactive": {
+    "$type": "color",
+    "primary":              { "$value": { "colorSpace": "oklch", "components": [0.44, 0.200, 264] }, "$description": "Darkened indigo — white text passes WCAG AA on dark surfaces" },
+    "primary-foreground":   { "$value": { "colorSpace": "oklch", "components": [0.97, 0.005, 264] }, "$description": "Near-white on indigo" },
+    "primary-hover":        { "$value": { "colorSpace": "oklch", "components": [0.50, 0.205, 264] } },
+    "primary-active":       { "$value": { "colorSpace": "oklch", "components": [0.56, 0.205, 264] } },
+    "primary-subtle":       { "$value": { "colorSpace": "oklch", "components": [0.18, 0.040, 264] }, "$description": "Muted indigo tint on dark" },
+    "secondary":            { "$value": { "colorSpace": "oklch", "components": [0.20, 0.016, 247] } },
+    "secondary-foreground": { "$value": { "colorSpace": "oklch", "components": [0.92, 0.005, 247] } },
+    "secondary-hover":      { "$value": { "colorSpace": "oklch", "components": [0.24, 0.018, 247] } },
+    "secondary-active":     { "$value": { "colorSpace": "oklch", "components": [0.28, 0.020, 247] } },
+    "ghost":                { "$value": { "colorSpace": "oklch", "components": [0, 0, 0], "alpha": 0 } },
+    "ghost-foreground":     { "$value": { "colorSpace": "oklch", "components": [0.92, 0.005, 247] } },
+    "ghost-hover":          { "$value": { "colorSpace": "oklch", "components": [0.18, 0.016, 247] } },
+    "destructive":          { "$value": { "colorSpace": "oklch", "components": [0.48, 0.215, 25] } },
+    "destructive-foreground": { "$value": { "colorSpace": "oklch", "components": [0.97, 0.005, 25] } },
+    "destructive-hover":    { "$value": { "colorSpace": "oklch", "components": [0.54, 0.215, 25] } }
+  },
+  "border": {
+    "$type": "color",
+    "subtle":      { "$value": { "colorSpace": "oklch", "components": [0.22, 0.016, 247] } },
+    "default":     { "$value": { "colorSpace": "oklch", "components": [0.28, 0.020, 247] } },
+    "strong":      { "$value": { "colorSpace": "oklch", "components": [0.40, 0.025, 247] } },
+    "interactive": { "$value": { "colorSpace": "oklch", "components": [0.55, 0.165, 264] } },
+    "focus":       { "$value": { "colorSpace": "oklch", "components": [0.62, 0.170, 264] } }
+  },
+  "ring": {
+    "$type": "color",
+    "default": { "$value": { "colorSpace": "oklch", "components": [0.62, 0.170, 264] } },
+    "offset":  { "$value": { "colorSpace": "oklch", "components": [0.11, 0.012, 247] }, "$description": "Offset matches dark background" }
+  },
+  "status": {
+    "$type": "color",
+    "success": {
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.46, 0.150, 150] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [0.97, 0.005, 150] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.14, 0.030, 150] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.78, 0.130, 150] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.34, 0.088, 150] } }
+    },
+    "warning": {
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.76, 0.130, 75] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [0.14, 0.020, 75] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.16, 0.040, 75] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.84, 0.120, 75] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.40, 0.100, 75] } }
+    },
+    "danger": {
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.48, 0.215, 25] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [0.97, 0.005, 25] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.15, 0.038, 25] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.82, 0.165, 25] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.36, 0.120, 25] } }
+    },
+    "info": {
+      "solid":             { "$value": { "colorSpace": "oklch", "components": [0.46, 0.172, 230] } },
+      "foreground":        { "$value": { "colorSpace": "oklch", "components": [0.97, 0.005, 230] } },
+      "subtle":            { "$value": { "colorSpace": "oklch", "components": [0.14, 0.034, 230] } },
+      "subtle-foreground": { "$value": { "colorSpace": "oklch", "components": [0.76, 0.140, 230] } },
+      "border":            { "$value": { "colorSpace": "oklch", "components": [0.34, 0.098, 230] } }
+    }
+  }
+}
