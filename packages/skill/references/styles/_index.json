@@ -1,0 +1,711 @@
+{
+  "version": 1,
+  "count": 54,
+  "styles": [
+    {
+      "id": "glassmorphism",
+      "category": "morphism",
+      "description": "Frosted-glass surfaces with backdrop blur, subtle transparency, and crisp edges.",
+      "when_to_use": [
+        "Hero overlays",
+        "Modal backgrounds",
+        "Card stacking",
+        "Premium feel"
+      ],
+      "contraindicated_with": [
+        "neumorphism",
+        "brutalism"
+      ],
+      "cost": "high"
+    },
+    {
+      "id": "neumorphism",
+      "category": "morphism",
+      "description": "Soft UI with extruded surfaces — same color as background, defined by paired light/dark shadows.",
+      "when_to_use": [
+        "Niche products",
+        "Music/audio apps",
+        "Smart home dashboards"
+      ],
+      "contraindicated_with": [
+        "glassmorphism",
+        "flat"
+      ],
+      "cost": "medium"
+    },
+    {
+      "id": "claymorphism",
+      "category": "morphism",
+      "description": "3D plasticky surfaces with rounded corners, inner light, and soft drop shadows.",
+      "when_to_use": [
+        "Onboarding flows",
+        "Marketing pages",
+        "Kid/playful products"
+      ],
+      "contraindicated_with": [
+        "brutalism",
+        "editorial"
+      ],
+      "cost": "medium"
+    },
+    {
+      "id": "skeuomorphic",
+      "category": "morphism",
+      "description": "Realistic textures and gradients mimicking physical materials.",
+      "when_to_use": [
+        "Niche tools (e.g. analog audio plugins, watch apps)",
+        "Specific brand requests"
+      ],
+      "contraindicated_with": [
+        "flat",
+        "minimal"
+      ],
+      "cost": "high"
+    },
+    {
+      "id": "flat",
+      "category": "flat",
+      "description": "Pure flat colors, no shadows, sharp edges. The default modern style.",
+      "when_to_use": [
+        "Default for most UI",
+        "Performance-critical apps",
+        "Content-focused products"
+      ],
+      "contraindicated_with": [
+        "skeuomorphic"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "flat-2",
+      "category": "flat",
+      "description": "Flat with subtle shadows for elevation and depth cues. Most popular style.",
+      "when_to_use": [
+        "SaaS apps",
+        "Dashboards",
+        "General product UI"
+      ],
+      "contraindicated_with": [
+        "neumorphism"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "clean-modern",
+      "category": "flat",
+      "description": "Refined flat with hairline borders, subtle shadows, generous whitespace.",
+      "when_to_use": [
+        "Default fallback",
+        "B2B SaaS",
+        "Productivity tools"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "minimal",
+      "category": "flat",
+      "description": "Maximum restraint. Borders only, no fills, no shadows.",
+      "when_to_use": [
+        "Editorial sites",
+        "Reading apps",
+        "Portfolio sites"
+      ],
+      "contraindicated_with": [
+        "claymorphism",
+        "neumorphism"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "editorial",
+      "category": "editorial",
+      "description": "Magazine-style with strong typography, asymmetric grid, generous margins.",
+      "when_to_use": [
+        "Long-form content",
+        "Newsletters",
+        "Blogs",
+        "Storytelling"
+      ],
+      "contraindicated_with": [
+        "brutalism"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "swiss-grid",
+      "category": "editorial",
+      "description": "International Typographic Style. Strict 12-column grid, sans-serif, asymmetric, no decoration.",
+      "when_to_use": [
+        "Portfolios",
+        "Architecture sites",
+        "Corporate identity"
+      ],
+      "contraindicated_with": [
+        "memphis",
+        "playful"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "newspaper",
+      "category": "editorial",
+      "description": "Multi-column dense text, classic serif, traditional hierarchy.",
+      "when_to_use": [
+        "News sites",
+        "Long articles"
+      ],
+      "contraindicated_with": [
+        "minimal"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "blog-clean",
+      "category": "editorial",
+      "description": "Modern blog: sans-serif, single column, ample whitespace.",
+      "when_to_use": [
+        "Personal blogs",
+        "Documentation",
+        "Reading apps"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "gallery",
+      "category": "editorial",
+      "description": "Gallery-style with image-forward composition, sparse text, generous margins.",
+      "when_to_use": [
+        "Portfolios",
+        "Photography",
+        "Product showcases"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "brutalism",
+      "category": "brutalist",
+      "description": "Raw, deliberately ugly, exposed structure. System fonts, sharp edges, harsh colors.",
+      "when_to_use": [
+        "Statement landing pages",
+        "Art/cultural sites",
+        "Tech-rebel brands"
+      ],
+      "contraindicated_with": [
+        "glassmorphism",
+        "claymorphism",
+        "minimal"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "neo-brutalism",
+      "category": "brutalist",
+      "description": "Brutalism softened with bold colors and chunky rounded corners.",
+      "when_to_use": [
+        "Indie SaaS landing",
+        "Creator products",
+        "Bold marketing"
+      ],
+      "contraindicated_with": [
+        "minimal"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "anti-design",
+      "category": "brutalist",
+      "description": "Intentionally clashing — breaks conventions for artistic effect.",
+      "when_to_use": [
+        "Avant-garde art sites",
+        "Statement projects"
+      ],
+      "contraindicated_with": [
+        "*"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "aurora",
+      "category": "expressive",
+      "description": "Atmospheric gradients evoking northern lights — soft hue shifts and luminous backgrounds.",
+      "when_to_use": [
+        "Landing pages",
+        "AI products",
+        "Hero sections"
+      ],
+      "contraindicated_with": [
+        "flat",
+        "minimal"
+      ],
+      "cost": "medium"
+    },
+    {
+      "id": "bento",
+      "category": "expressive",
+      "description": "Asymmetric grid of varied-size cards, like a bento box.",
+      "when_to_use": [
+        "Product showcases",
+        "Feature highlights",
+        "Personal portfolios"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "cyberpunk",
+      "category": "expressive",
+      "description": "Neon-on-dark with sharp angles, scanlines, glow effects.",
+      "when_to_use": [
+        "Gaming sites",
+        "Crypto",
+        "Sci-fi products"
+      ],
+      "contraindicated_with": [
+        "minimal",
+        "editorial"
+      ],
+      "cost": "medium"
+    },
+    {
+      "id": "synthwave",
+      "category": "expressive",
+      "description": "80s sunset gradients with grid horizons and neon accents.",
+      "when_to_use": [
+        "Music apps",
+        "Retro themes",
+        "Hero sections"
+      ],
+      "contraindicated_with": [],
+      "cost": "medium"
+    },
+    {
+      "id": "vaporwave",
+      "category": "expressive",
+      "description": "Pastel cyan/pink/purple aesthetic with retro tech motifs.",
+      "when_to_use": [
+        "Niche creative sites",
+        "Music platforms"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "material-3",
+      "category": "material",
+      "description": "Google Material Design 3: dynamic color, expressive shapes, elevation tiers.",
+      "when_to_use": [
+        "Android apps",
+        "Cross-platform with Android",
+        "Google product alignment"
+      ],
+      "contraindicated_with": [
+        "hig",
+        "fluent"
+      ],
+      "cost": "medium"
+    },
+    {
+      "id": "fluent-2",
+      "category": "material",
+      "description": "Microsoft Fluent 2: depth, motion, materials (acrylic, mica).",
+      "when_to_use": [
+        "Windows apps",
+        "Microsoft ecosystem"
+      ],
+      "contraindicated_with": [
+        "material-3"
+      ],
+      "cost": "medium"
+    },
+    {
+      "id": "hig",
+      "category": "material",
+      "description": "Apple Human Interface Guidelines: cleanliness, deference, depth.",
+      "when_to_use": [
+        "iOS/macOS apps",
+        "Apple-aligned products"
+      ],
+      "contraindicated_with": [
+        "material-3",
+        "fluent-2"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "liquid-glass",
+      "category": "material",
+      "description": "Apple Liquid Glass aesthetic: translucent, refractive surfaces.",
+      "when_to_use": [
+        "Apple platform showcases",
+        "Premium iOS/macOS apps"
+      ],
+      "contraindicated_with": [
+        "flat",
+        "brutalism"
+      ],
+      "cost": "high"
+    },
+    {
+      "id": "dashboard-dense",
+      "category": "dashboard",
+      "description": "Information-dense dashboard. Tight spacing, small fonts, clear data hierarchy.",
+      "when_to_use": [
+        "Trading platforms",
+        "Analytics tools",
+        "Admin panels"
+      ],
+      "contraindicated_with": [
+        "editorial",
+        "gallery"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "dashboard-airy",
+      "category": "dashboard",
+      "description": "Modern dashboard with breathing room — cards, generous spacing, clear data viz.",
+      "when_to_use": [
+        "SaaS dashboards",
+        "Health/wellness apps",
+        "Personal analytics"
+      ],
+      "contraindicated_with": [
+        "dashboard-dense"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "admin",
+      "category": "dashboard",
+      "description": "Sober admin panel — tables, sidebars, action toolbars.",
+      "when_to_use": [
+        "Backoffice tools",
+        "CMS",
+        "Internal admin"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "terminal",
+      "category": "retro",
+      "description": "CLI terminal aesthetic: monospace, minimal chrome, single accent color.",
+      "when_to_use": [
+        "Dev tools",
+        "Hacker culture sites"
+      ],
+      "contraindicated_with": [
+        "claymorphism"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "mid-century-modern",
+      "category": "retro",
+      "description": "Mid-century: warm earth tones, geometric shapes, generous whitespace.",
+      "when_to_use": [
+        "Furniture/home goods",
+        "Retro brands"
+      ],
+      "contraindicated_with": [
+        "cyberpunk"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "memphis",
+      "category": "retro",
+      "description": "80s Memphis design: bold colors, geometric patterns, playful chaos.",
+      "when_to_use": [
+        "Statement landing pages",
+        "Creative portfolios"
+      ],
+      "contraindicated_with": [
+        "minimal",
+        "editorial"
+      ],
+      "cost": "medium"
+    },
+    {
+      "id": "art-deco",
+      "category": "retro",
+      "description": "Art Deco: gold-on-navy, geometric symmetry, ornate borders.",
+      "when_to_use": [
+        "Luxury brands",
+        "Wedding/event sites"
+      ],
+      "contraindicated_with": [],
+      "cost": "medium"
+    },
+    {
+      "id": "y2k",
+      "category": "retro",
+      "description": "Y2K aesthetic: chrome, gradients, frosted glass, cyan/magenta.",
+      "when_to_use": [
+        "Niche creative sites",
+        "Music/fashion"
+      ],
+      "contraindicated_with": [
+        "minimal"
+      ],
+      "cost": "medium"
+    },
+    {
+      "id": "kiosk",
+      "category": "specialized",
+      "description": "Large touch targets, high contrast, simple navigation. For public terminals.",
+      "when_to_use": [
+        "Self-service kiosks",
+        "Wayfinding",
+        "Accessibility-first"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "mobile-first",
+      "category": "specialized",
+      "description": "Thumb-friendly bottom nav, swipe gestures, tall touch zones.",
+      "when_to_use": [
+        "Mobile apps",
+        "Mobile-web priority"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "high-density-table",
+      "category": "specialized",
+      "description": "Spreadsheet-density tables: tabular nums, sticky headers, compact rows.",
+      "when_to_use": [
+        "Data tools",
+        "Trading",
+        "Spreadsheet UIs"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "wireframe",
+      "category": "specialized",
+      "description": "Schematic black-on-white wireframe look — for prototypes, drafts.",
+      "when_to_use": [
+        "Mockups",
+        "Drafts",
+        "Architectural diagrams"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "blueprint",
+      "category": "specialized",
+      "description": "Engineering blueprint: cyan-on-navy with technical typography.",
+      "when_to_use": [
+        "Engineering tools",
+        "Architecture sites"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "gradient-mesh",
+      "category": "expressive",
+      "description": "Multi-stop mesh gradients for atmospheric backgrounds.",
+      "when_to_use": [
+        "Hero sections",
+        "AI products",
+        "Modern landing"
+      ],
+      "contraindicated_with": [
+        "flat"
+      ],
+      "cost": "medium"
+    },
+    {
+      "id": "noise",
+      "category": "expressive",
+      "description": "Subtle film-grain texture across surfaces.",
+      "when_to_use": [
+        "Premium brands",
+        "Editorial sites",
+        "Gallery sites"
+      ],
+      "contraindicated_with": [
+        "flat"
+      ],
+      "cost": "medium"
+    },
+    {
+      "id": "playful-pop",
+      "category": "playful",
+      "description": "Bright saturated colors, chunky rounded shapes, friendly type.",
+      "when_to_use": [
+        "Consumer apps",
+        "Education",
+        "Kid products",
+        "Marketing"
+      ],
+      "contraindicated_with": [
+        "minimal",
+        "editorial"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "kawaii",
+      "category": "playful",
+      "description": "Cute Japanese-inspired aesthetic: soft pastels, rounded everything, friendly faces.",
+      "when_to_use": [
+        "Kid apps",
+        "Niche cute brands"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "illustrated",
+      "category": "playful",
+      "description": "Custom illustrations as primary visual element, supportive UI.",
+      "when_to_use": [
+        "Onboarding",
+        "Empty states",
+        "Marketing"
+      ],
+      "contraindicated_with": [],
+      "cost": "high"
+    },
+    {
+      "id": "reading-mode",
+      "category": "editorial",
+      "description": "Optimized for long reading: warm tones, comfortable line length, no chrome.",
+      "when_to_use": [
+        "Article views",
+        "Reader apps",
+        "Documentation"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "documentation",
+      "category": "editorial",
+      "description": "Technical docs: clear hierarchy, monospace inline code, sidebar nav.",
+      "when_to_use": [
+        "Dev docs",
+        "API references",
+        "Knowledge bases"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "animated-rich",
+      "category": "expressive",
+      "description": "Heavy use of motion, scroll-triggered animations, hover interactions.",
+      "when_to_use": [
+        "Marketing pages",
+        "Showcases"
+      ],
+      "contraindicated_with": [
+        "kiosk"
+      ],
+      "cost": "high"
+    },
+    {
+      "id": "soft-modern",
+      "category": "flat",
+      "description": "Modern flat with extra-large radius and pastel palettes.",
+      "when_to_use": [
+        "Wellness apps",
+        "Lifestyle products"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "sticker",
+      "category": "playful",
+      "description": "Sticker-pack aesthetic: chunky outlines, drop shadows, layered cards.",
+      "when_to_use": [
+        "Social apps",
+        "Creator tools",
+        "Marketing"
+      ],
+      "contraindicated_with": [
+        "minimal"
+      ],
+      "cost": "low"
+    },
+    {
+      "id": "magazine-modern",
+      "category": "editorial",
+      "description": "Modern magazine: large display type, image-led, generous margins.",
+      "when_to_use": [
+        "Editorial sites",
+        "Long-form content"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "dark-luxe",
+      "category": "premium",
+      "description": "Dark mode luxury: deep blacks, gold/silver accents, elegant serifs.",
+      "when_to_use": [
+        "Luxury e-commerce",
+        "High-end services"
+      ],
+      "contraindicated_with": [],
+      "cost": "medium"
+    },
+    {
+      "id": "floating",
+      "category": "expressive",
+      "description": "Floating cards/elements with deep shadows and subtle hover lift.",
+      "when_to_use": [
+        "Showcase sites",
+        "Modern landings"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "orbit",
+      "category": "expressive",
+      "description": "Concentric circular layouts with central focus.",
+      "when_to_use": [
+        "Dashboards with central metric",
+        "Concept landings"
+      ],
+      "contraindicated_with": [],
+      "cost": "medium"
+    },
+    {
+      "id": "split-screen",
+      "category": "specialized",
+      "description": "Two-pane layout — visual on one side, content on other.",
+      "when_to_use": [
+        "Hero sections",
+        "Feature pages",
+        "Auth pages"
+      ],
+      "contraindicated_with": [],
+      "cost": "low"
+    },
+    {
+      "id": "fullbleed",
+      "category": "expressive",
+      "description": "Edge-to-edge imagery with overlaid text — magazine cover style.",
+      "when_to_use": [
+        "Hero sections",
+        "Storytelling sites"
+      ],
+      "contraindicated_with": [],
+      "cost": "medium"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "description": "Evaluation suite for vyre-design-system skill triggering and behavior.",
+  "should_trigger": [
+    {
+      "input": "Build me a button component in React",
+      "reason": "Direct UI component request"
+    },
+    {
+      "input": "Help me pick colors for my dashboard",
+      "reason": "Color/theming request"
+    },
+    {
+      "input": "Make this card look more modern",
+      "reason": "Visual styling request"
+    },
+    {
+      "input": "Add dark mode to my app",
+      "reason": "Theming request"
+    },
+    {
+      "input": "Fix the spacing in this form",
+      "reason": "Layout/spacing request"
+    },
+    {
+      "input": "Improve the UI of my landing page",
+      "reason": "UI improvement"
+    },
+    {
+      "input": "Make it look good",
+      "reason": "Casual visual request"
+    },
+    {
+      "input": "Design a settings page for me",
+      "reason": "Page design"
+    },
+    {
+      "input": "Make it accessible",
+      "reason": "A11y request — should pull WCAG rules"
+    },
+    {
+      "input": "Add some style to this boring page",
+      "reason": "Aesthetic improvement"
+    },
+    {
+      "input": "Build a glassmorphism login",
+      "reason": "Specific UI style requested"
+    },
+    {
+      "input": "I need a brutalist landing page",
+      "reason": "Style-specific request"
+    },
+    {
+      "input": "Pick a palette for a finance app",
+      "reason": "Palette selection"
+    },
+    {
+      "input": "Add hover states to my buttons",
+      "reason": "Interaction design"
+    },
+    {
+      "input": "Why does my form feel cramped?",
+      "reason": "Layout/spacing diagnostic"
+    },
+    {
+      "input": "Add subtle animations to my cards",
+      "reason": "Motion design"
+    },
+    {
+      "input": "What font should I use?",
+      "reason": "Typography choice"
+    },
+    {
+      "input": "Make this responsive",
+      "reason": "Layout responsiveness"
+    },
+    {
+      "input": "Convert these inline styles to a design system",
+      "reason": "Token migration"
+    },
+    {
+      "input": "This needs more polish",
+      "reason": "Visual refinement"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "input": "What is the capital of France?",
+      "reason": "Trivia, not UI"
+    },
+    {
+      "input": "Write a Python script to parse JSON",
+      "reason": "Backend/scripting, no UI"
+    },
+    {
+      "input": "How does TCP work?",
+      "reason": "Networking concept"
+    },
+    {
+      "input": "Help me debug my SQL query",
+      "reason": "Database, not UI"
+    },
+    {
+      "input": "Explain recursion to me",
+      "reason": "Concept explanation"
+    },
+    {
+      "input": "Write a unit test for this function",
+      "reason": "Testing, not UI"
+    },
+    {
+      "input": "Recommend a book on philosophy",
+      "reason": "Off-topic"
+    },
+    {
+      "input": "Calculate compound interest for $1000",
+      "reason": "Math problem"
+    },
+    {
+      "input": "Write a haiku about coffee",
+      "reason": "Creative writing"
+    },
+    {
+      "input": "Translate this sentence to Spanish",
+      "reason": "Translation task"
+    }
+  ],
+  "expected_behaviors": [
+    {
+      "scenario": "Build a button",
+      "must_include": [
+        "Token references (var(--vyre-*) or bg-primary)",
+        "Both background AND foreground tokens paired",
+        "Hover state",
+        "Focus-visible ring",
+        "No raw hex colors"
+      ],
+      "must_not_include": [
+        "Raw colors like #fff or #000",
+        "Hardcoded px spacing",
+        "Inline styles with literal values"
+      ]
+    },
+    {
+      "scenario": "Pick a palette",
+      "must_include": [
+        "Reference the palette manifest",
+        "Tag-based filtering reasoning",
+        "At least 2-3 palette suggestions",
+        "Justify each choice"
+      ]
+    },
+    {
+      "scenario": "Make accessible",
+      "must_include": [
+        "Focus indicators",
+        "Touch target sizes",
+        "Contrast guidance",
+        "Semantic HTML",
+        "ARIA where needed"
+      ]
+    },
+    {
+      "scenario": "Add animations",
+      "must_include": [
+        "prefers-reduced-motion guard",
+        "Transform/opacity not layout properties",
+        "Duration token reference",
+        "Easing token reference"
+      ]
+    }
+  ]
+}

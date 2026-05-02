@@ -1,0 +1,650 @@
+{
+  "$schema": "https://gapra.dev/vyre/schemas/skill-index.json",
+  "total": 90,
+  "categories": {
+    "gestalt": [
+      {
+        "id": "proximity",
+        "title": "Proximity",
+        "severity": "high",
+        "summary": "Group related items by spatial closeness; separate unrelated items with whitespace.",
+        "path": "references/ux-rules/gestalt/proximity.md"
+      },
+      {
+        "id": "similarity",
+        "title": "Similarity",
+        "severity": "high",
+        "summary": "Visually similar elements are perceived as related, even when far apart.",
+        "path": "references/ux-rules/gestalt/similarity.md"
+      },
+      {
+        "id": "common-region",
+        "title": "Common Region",
+        "severity": "medium",
+        "summary": "Items in the same bounded region (card, panel) are perceived as a unit.",
+        "path": "references/ux-rules/gestalt/common-region.md"
+      },
+      {
+        "id": "continuity",
+        "title": "Continuity / Good Continuation",
+        "severity": "medium",
+        "summary": "The eye follows smooth lines and curves; align elements to continuous axes.",
+        "path": "references/ux-rules/gestalt/continuity.md"
+      },
+      {
+        "id": "closure",
+        "title": "Closure",
+        "severity": "low",
+        "summary": "The mind completes incomplete shapes; you don't need to draw every line.",
+        "path": "references/ux-rules/gestalt/closure.md"
+      },
+      {
+        "id": "figure-ground",
+        "title": "Figure / Ground",
+        "severity": "high",
+        "summary": "Establish clear figure-ground separation so users know what to focus on.",
+        "path": "references/ux-rules/gestalt/figure-ground.md"
+      },
+      {
+        "id": "symmetry",
+        "title": "Symmetry & Balance",
+        "severity": "low",
+        "summary": "Symmetric compositions feel stable; asymmetric ones feel dynamic.",
+        "path": "references/ux-rules/gestalt/symmetry.md"
+      },
+      {
+        "id": "common-fate",
+        "title": "Common Fate",
+        "severity": "medium",
+        "summary": "Elements moving together are perceived as related.",
+        "path": "references/ux-rules/gestalt/common-fate.md"
+      },
+      {
+        "id": "focal-point",
+        "title": "Focal Point",
+        "severity": "high",
+        "summary": "Every screen needs one primary focal point. More than one creates competition.",
+        "path": "references/ux-rules/gestalt/focal-point.md"
+      },
+      {
+        "id": "hierarchy",
+        "title": "Visual Hierarchy",
+        "severity": "high",
+        "summary": "Establish a clear reading order with size, weight, color, and spacing.",
+        "path": "references/ux-rules/gestalt/hierarchy.md"
+      }
+    ],
+    "heuristics": [
+      {
+        "id": "system-status",
+        "title": "Visibility of System Status",
+        "severity": "high",
+        "summary": "Always keep users informed about what's happening through appropriate feedback.",
+        "path": "references/ux-rules/heuristics/system-status.md"
+      },
+      {
+        "id": "match-real-world",
+        "title": "Match Between System and Real World",
+        "severity": "high",
+        "summary": "Use language and concepts familiar to your users, not internal jargon.",
+        "path": "references/ux-rules/heuristics/match-real-world.md"
+      },
+      {
+        "id": "user-control",
+        "title": "User Control and Freedom",
+        "severity": "high",
+        "summary": "Provide clearly marked emergency exits — undo, cancel, back.",
+        "path": "references/ux-rules/heuristics/user-control.md"
+      },
+      {
+        "id": "consistency",
+        "title": "Consistency and Standards",
+        "severity": "high",
+        "summary": "Follow platform conventions. Same things should look and behave the same way.",
+        "path": "references/ux-rules/heuristics/consistency.md"
+      },
+      {
+        "id": "error-prevention",
+        "title": "Error Prevention",
+        "severity": "high",
+        "summary": "Prevent errors before they happen via good design and constraints.",
+        "path": "references/ux-rules/heuristics/error-prevention.md"
+      },
+      {
+        "id": "recognition-recall",
+        "title": "Recognition Rather Than Recall",
+        "severity": "medium",
+        "summary": "Minimize memory load by making options, actions, and information visible.",
+        "path": "references/ux-rules/heuristics/recognition-recall.md"
+      },
+      {
+        "id": "flexibility",
+        "title": "Flexibility and Efficiency of Use",
+        "severity": "medium",
+        "summary": "Accelerators for experts that don't get in the way of novices.",
+        "path": "references/ux-rules/heuristics/flexibility.md"
+      },
+      {
+        "id": "minimal-design",
+        "title": "Aesthetic and Minimalist Design",
+        "severity": "medium",
+        "summary": "Remove what isn't needed. Every extra element competes for attention.",
+        "path": "references/ux-rules/heuristics/minimal-design.md"
+      },
+      {
+        "id": "error-recovery",
+        "title": "Help Users Recover From Errors",
+        "severity": "high",
+        "summary": "Error messages: plain language, problem stated, solution suggested.",
+        "path": "references/ux-rules/heuristics/error-recovery.md"
+      },
+      {
+        "id": "help-docs",
+        "title": "Help and Documentation",
+        "severity": "low",
+        "summary": "Even better if no help is needed, but provide it for complex tasks.",
+        "path": "references/ux-rules/heuristics/help-docs.md"
+      },
+      {
+        "id": "trust-credibility",
+        "title": "Trust and Credibility",
+        "severity": "high",
+        "summary": "Polish, transparency, and predictability build trust. Cheap-looking UI loses users.",
+        "path": "references/ux-rules/heuristics/trust-credibility.md"
+      },
+      {
+        "id": "user-autonomy",
+        "title": "Respect User Autonomy",
+        "severity": "high",
+        "summary": "Don't dark-pattern users into actions they didn't choose.",
+        "path": "references/ux-rules/heuristics/user-autonomy.md"
+      }
+    ],
+    "a11y": [
+      {
+        "id": "color-contrast-text",
+        "title": "Text Color Contrast",
+        "severity": "high",
+        "summary": "Body text ≥4.5:1, large text ≥3:1, UI components ≥3:1 against background.",
+        "path": "references/ux-rules/a11y/color-contrast-text.md"
+      },
+      {
+        "id": "color-not-only-channel",
+        "title": "Color Is Not the Only Channel",
+        "severity": "high",
+        "summary": "Don't rely on color alone to convey meaning.",
+        "path": "references/ux-rules/a11y/color-not-only-channel.md"
+      },
+      {
+        "id": "focus-visible",
+        "title": "Visible Focus Indicators",
+        "severity": "high",
+        "summary": "Keyboard users must see where focus is at all times.",
+        "path": "references/ux-rules/a11y/focus-visible.md"
+      },
+      {
+        "id": "focus-order",
+        "title": "Logical Focus Order",
+        "severity": "high",
+        "summary": "Tab order follows visual reading order; no traps or skips.",
+        "path": "references/ux-rules/a11y/focus-order.md"
+      },
+      {
+        "id": "keyboard-operable",
+        "title": "Full Keyboard Operability",
+        "severity": "high",
+        "summary": "Every interactive element must be reachable AND operable by keyboard alone.",
+        "path": "references/ux-rules/a11y/keyboard-operable.md"
+      },
+      {
+        "id": "semantic-html",
+        "title": "Semantic HTML First",
+        "severity": "high",
+        "summary": "Use the right element for the job. ARIA is a fallback, not a starting point.",
+        "path": "references/ux-rules/a11y/semantic-html.md"
+      },
+      {
+        "id": "form-labels",
+        "title": "Form Labels",
+        "severity": "high",
+        "summary": "Every form field has a programmatically associated, persistent visible label.",
+        "path": "references/ux-rules/a11y/form-labels.md"
+      },
+      {
+        "id": "alt-text",
+        "title": "Image Alt Text",
+        "severity": "high",
+        "summary": "Meaningful images need descriptive alt; decorative images need alt=''.",
+        "path": "references/ux-rules/a11y/alt-text.md"
+      },
+      {
+        "id": "heading-hierarchy",
+        "title": "Heading Hierarchy",
+        "severity": "high",
+        "summary": "One h1 per page; never skip levels (h2 → h4).",
+        "path": "references/ux-rules/a11y/heading-hierarchy.md"
+      },
+      {
+        "id": "aria-roles",
+        "title": "Correct ARIA Roles",
+        "severity": "medium",
+        "summary": "ARIA roles must match the element's actual behavior.",
+        "path": "references/ux-rules/a11y/aria-roles.md"
+      },
+      {
+        "id": "live-regions",
+        "title": "Live Regions for Dynamic Content",
+        "severity": "medium",
+        "summary": "Announce dynamic updates (toasts, errors, search results) to screen readers.",
+        "path": "references/ux-rules/a11y/live-regions.md"
+      },
+      {
+        "id": "touch-target-size",
+        "title": "Touch Target Size",
+        "severity": "high",
+        "summary": "Interactive targets ≥44×44px (iOS) / 48×48dp (Material).",
+        "path": "references/ux-rules/a11y/touch-target-size.md"
+      },
+      {
+        "id": "motion-reduce",
+        "title": "Honor prefers-reduced-motion",
+        "severity": "high",
+        "summary": "Disable or reduce non-essential motion when user prefers reduced motion.",
+        "path": "references/ux-rules/a11y/motion-reduce.md"
+      },
+      {
+        "id": "no-flashing",
+        "title": "No Flashing Content",
+        "severity": "high",
+        "summary": "No content flashes more than 3 times per second.",
+        "path": "references/ux-rules/a11y/no-flashing.md"
+      },
+      {
+        "id": "language-attr",
+        "title": "Document Language",
+        "severity": "medium",
+        "summary": "<html lang='...'> and lang attributes on foreign-language inline content.",
+        "path": "references/ux-rules/a11y/language-attr.md"
+      },
+      {
+        "id": "skip-links",
+        "title": "Skip Navigation Link",
+        "severity": "medium",
+        "summary": "Provide a 'Skip to main content' link as the first focusable element.",
+        "path": "references/ux-rules/a11y/skip-links.md"
+      },
+      {
+        "id": "captions-transcripts",
+        "title": "Captions and Transcripts",
+        "severity": "high",
+        "summary": "Pre-recorded video has captions; audio has transcript.",
+        "path": "references/ux-rules/a11y/captions-transcripts.md"
+      },
+      {
+        "id": "zoom-reflow",
+        "title": "Zoom and Reflow",
+        "severity": "high",
+        "summary": "Page must work at 200% zoom and reflow at 320 CSS px width.",
+        "path": "references/ux-rules/a11y/zoom-reflow.md"
+      },
+      {
+        "id": "form-error-identification",
+        "title": "Identify Form Errors Accessibly",
+        "severity": "high",
+        "summary": "Errors associated with the relevant field via aria-describedby; error summary at top of form.",
+        "path": "references/ux-rules/a11y/form-error-identification.md"
+      },
+      {
+        "id": "autocomplete-attr",
+        "title": "Autocomplete on Form Fields",
+        "severity": "medium",
+        "summary": "Use autocomplete tokens to help password managers and assistive tech.",
+        "path": "references/ux-rules/a11y/autocomplete-attr.md"
+      },
+      {
+        "id": "accessible-name",
+        "title": "Accessible Names for Controls",
+        "severity": "high",
+        "summary": "Every interactive element has an accessible name (visible label, aria-label, or aria-labelledby).",
+        "path": "references/ux-rules/a11y/accessible-name.md"
+      },
+      {
+        "id": "non-text-contrast",
+        "title": "Non-Text Contrast",
+        "severity": "high",
+        "summary": "UI components and graphical elements need ≥3:1 against adjacent colors.",
+        "path": "references/ux-rules/a11y/non-text-contrast.md"
+      },
+      {
+        "id": "session-timeout",
+        "title": "Session Timeout Warnings",
+        "severity": "medium",
+        "summary": "Warn users before timeout; offer to extend session.",
+        "path": "references/ux-rules/a11y/session-timeout.md"
+      },
+      {
+        "id": "screen-reader-only",
+        "title": "Screen-Reader-Only Text",
+        "severity": "low",
+        "summary": "Use sr-only utility for context that's visual-only obvious.",
+        "path": "references/ux-rules/a11y/screen-reader-only.md"
+      },
+      {
+        "id": "high-contrast-mode",
+        "title": "Windows High Contrast Mode",
+        "severity": "medium",
+        "summary": "Test in forced-colors mode; ensure UI remains usable.",
+        "path": "references/ux-rules/a11y/high-contrast-mode.md"
+      }
+    ],
+    "interaction": [
+      {
+        "id": "feedback-latency",
+        "title": "Feedback Latency Tiers",
+        "severity": "high",
+        "summary": "<100ms feels instant. 100-300ms feels snappy. 300ms-1s needs feedback. >1s needs progress.",
+        "path": "references/ux-rules/interaction/feedback-latency.md"
+      },
+      {
+        "id": "click-to-target",
+        "title": "Click Targets Match Affordance",
+        "severity": "high",
+        "summary": "Visual affordance and click area must match exactly.",
+        "path": "references/ux-rules/interaction/click-to-target.md"
+      },
+      {
+        "id": "hover-not-required",
+        "title": "Hover Is Not a Requirement",
+        "severity": "high",
+        "summary": "Hover-only interactions break on touch devices.",
+        "path": "references/ux-rules/interaction/hover-not-required.md"
+      },
+      {
+        "id": "drag-drop-keyboard",
+        "title": "Drag-and-Drop Has Keyboard Equivalent",
+        "severity": "medium",
+        "summary": "Every drag-drop interaction has buttons or shortcuts for keyboard users.",
+        "path": "references/ux-rules/interaction/drag-drop-keyboard.md"
+      },
+      {
+        "id": "scroll-hijack",
+        "title": "Don't Hijack Scroll",
+        "severity": "high",
+        "summary": "Respect native scroll behavior; don't override speed, direction, or chaining.",
+        "path": "references/ux-rules/interaction/scroll-hijack.md"
+      },
+      {
+        "id": "infinite-scroll-care",
+        "title": "Infinite Scroll: Use With Care",
+        "severity": "medium",
+        "summary": "Infinite scroll breaks back/forward and footer access. Prefer paginated load-more.",
+        "path": "references/ux-rules/interaction/infinite-scroll-care.md"
+      },
+      {
+        "id": "destructive-confirmation",
+        "title": "Confirm Destructive Actions",
+        "severity": "high",
+        "summary": "Irreversible destructive actions require confirmation OR robust undo.",
+        "path": "references/ux-rules/interaction/destructive-confirmation.md"
+      },
+      {
+        "id": "no-modal-modal",
+        "title": "No Modals Inside Modals",
+        "severity": "medium",
+        "summary": "Stacked modals are a UX smell. Use full-screen takeover or in-place editing instead.",
+        "path": "references/ux-rules/interaction/no-modal-modal.md"
+      },
+      {
+        "id": "form-no-block-on-validation",
+        "title": "Don't Block on Validation",
+        "severity": "high",
+        "summary": "Validate inline as user types or on blur. Don't block submit until errors are visible.",
+        "path": "references/ux-rules/interaction/form-no-block-on-validation.md"
+      },
+      {
+        "id": "loading-skeleton",
+        "title": "Loading States: Match Final Layout",
+        "severity": "medium",
+        "summary": "Skeletons should approximate the final layout to prevent CLS.",
+        "path": "references/ux-rules/interaction/loading-skeleton.md"
+      }
+    ],
+    "motion": [
+      {
+        "id": "motion-purpose",
+        "title": "Motion Has Purpose",
+        "severity": "high",
+        "summary": "Animation communicates: state changes, hierarchy, spatial relationships. Decorative motion is noise.",
+        "path": "references/ux-rules/motion/motion-purpose.md"
+      },
+      {
+        "id": "motion-duration",
+        "title": "Motion Duration",
+        "severity": "high",
+        "summary": "Micro: 100-200ms. Standard: 200-400ms. Large/complex: 400-600ms. >600ms feels slow.",
+        "path": "references/ux-rules/motion/motion-duration.md"
+      },
+      {
+        "id": "motion-easing",
+        "title": "Motion Easing",
+        "severity": "medium",
+        "summary": "Use ease-out for entrances, ease-in for exits, ease-in-out for moves. Avoid linear except for loops.",
+        "path": "references/ux-rules/motion/motion-easing.md"
+      },
+      {
+        "id": "motion-stagger",
+        "title": "Staggered Animations",
+        "severity": "low",
+        "summary": "Stagger 30-50ms between items to imply sequence. >100ms feels slow.",
+        "path": "references/ux-rules/motion/motion-stagger.md"
+      },
+      {
+        "id": "spatial-continuity",
+        "title": "Spatial Continuity",
+        "severity": "medium",
+        "summary": "Animate elements between states so users track them; don't snap-cut.",
+        "path": "references/ux-rules/motion/spatial-continuity.md"
+      },
+      {
+        "id": "no-autoplay-loops",
+        "title": "No Auto-Play Looping Motion",
+        "severity": "medium",
+        "summary": "Looping animations next to text are distracting; pause when user is reading.",
+        "path": "references/ux-rules/motion/no-autoplay-loops.md"
+      },
+      {
+        "id": "transform-opacity-only",
+        "title": "Animate Transform and Opacity Only",
+        "severity": "high",
+        "summary": "Animating layout properties (width, height, top, left) causes jank. Use transform and opacity.",
+        "path": "references/ux-rules/motion/transform-opacity-only.md"
+      },
+      {
+        "id": "respect-reduced-motion",
+        "title": "Respect prefers-reduced-motion",
+        "severity": "high",
+        "summary": "Disable non-essential motion when user prefers reduced motion.",
+        "path": "references/ux-rules/motion/respect-reduced-motion.md"
+      }
+    ],
+    "content": [
+      {
+        "id": "voice-tone",
+        "title": "Voice and Tone",
+        "severity": "medium",
+        "summary": "Define a voice (consistent personality) and tone (varies by context).",
+        "path": "references/ux-rules/content/voice-tone.md"
+      },
+      {
+        "id": "plain-language",
+        "title": "Plain Language",
+        "severity": "high",
+        "summary": "Write at a grade 6-8 reading level for general audiences.",
+        "path": "references/ux-rules/content/plain-language.md"
+      },
+      {
+        "id": "button-labels",
+        "title": "Button Labels Describe Action",
+        "severity": "high",
+        "summary": "Buttons say what they do, in user terms.",
+        "path": "references/ux-rules/content/button-labels.md"
+      },
+      {
+        "id": "error-messages",
+        "title": "Error Message Anatomy",
+        "severity": "high",
+        "summary": "Problem + cause + solution. No blame. No codes alone.",
+        "path": "references/ux-rules/content/error-messages.md"
+      },
+      {
+        "id": "empty-states",
+        "title": "Empty States Teach",
+        "severity": "medium",
+        "summary": "Empty states are onboarding moments. Tell user what goes here, why, and how to start.",
+        "path": "references/ux-rules/content/empty-states.md"
+      },
+      {
+        "id": "loading-copy",
+        "title": "Loading Copy",
+        "severity": "low",
+        "summary": "Brief, calm. 'Loading...' is fine. Long loads can show what's happening.",
+        "path": "references/ux-rules/content/loading-copy.md"
+      },
+      {
+        "id": "numbers-formatting",
+        "title": "Number and Date Formatting",
+        "severity": "high",
+        "summary": "Use locale-aware formatting. Right-align numbers in tables.",
+        "path": "references/ux-rules/content/numbers-formatting.md"
+      },
+      {
+        "id": "truncation-honest",
+        "title": "Honest Truncation",
+        "severity": "medium",
+        "summary": "Long content needs truncation strategy: ellipsis with full content on hover/expand.",
+        "path": "references/ux-rules/content/truncation-honest.md"
+      },
+      {
+        "id": "labels-not-placeholders",
+        "title": "Labels, Not Placeholder-Only",
+        "severity": "high",
+        "summary": "Persistent visible labels. Placeholders are hints, not labels.",
+        "path": "references/ux-rules/content/labels-not-placeholders.md"
+      },
+      {
+        "id": "honest-marketing",
+        "title": "Honest Marketing Copy",
+        "severity": "medium",
+        "summary": "Don't oversell, fake urgency, or use deceptive scarcity claims.",
+        "path": "references/ux-rules/content/honest-marketing.md"
+      },
+      {
+        "id": "consistent-terminology",
+        "title": "Consistent Terminology",
+        "severity": "medium",
+        "summary": "Use the same word for the same concept everywhere.",
+        "path": "references/ux-rules/content/consistent-terminology.md"
+      },
+      {
+        "id": "title-case-vs-sentence",
+        "title": "Title Case vs Sentence Case",
+        "severity": "low",
+        "summary": "Pick one and stick to it. Sentence case is more modern and easier to read.",
+        "path": "references/ux-rules/content/title-case-vs-sentence.md"
+      },
+      {
+        "id": "internationalization",
+        "title": "Internationalization Ready",
+        "severity": "medium",
+        "summary": "Don't bake assumptions about text length, direction, or pluralization.",
+        "path": "references/ux-rules/content/internationalization.md"
+      },
+      {
+        "id": "destructive-copy",
+        "title": "Destructive Action Copy",
+        "severity": "high",
+        "summary": "Be explicit. Spell out what will happen and what is irreversible.",
+        "path": "references/ux-rules/content/destructive-copy.md"
+      },
+      {
+        "id": "ai-generated-disclosure",
+        "title": "Disclose AI-Generated Content",
+        "severity": "high",
+        "summary": "When AI generates user-facing content, label it clearly.",
+        "path": "references/ux-rules/content/ai-generated-disclosure.md"
+      }
+    ],
+    "forms": [
+      {
+        "id": "form-length",
+        "title": "Form Length: Ask for Less",
+        "severity": "high",
+        "summary": "Every field is friction. Cut anything not strictly necessary.",
+        "path": "references/ux-rules/forms/form-length.md"
+      },
+      {
+        "id": "form-grouping",
+        "title": "Group Related Fields",
+        "severity": "medium",
+        "summary": "Use headings, fieldsets, or whitespace to group related inputs.",
+        "path": "references/ux-rules/forms/form-grouping.md"
+      },
+      {
+        "id": "form-single-column",
+        "title": "Default to Single Column",
+        "severity": "high",
+        "summary": "Single-column forms are faster to scan and complete.",
+        "path": "references/ux-rules/forms/form-single-column.md"
+      },
+      {
+        "id": "form-input-types",
+        "title": "Use Correct Input Types",
+        "severity": "high",
+        "summary": "type='email' / 'tel' / 'number' / 'date' triggers correct keyboards and validation.",
+        "path": "references/ux-rules/forms/form-input-types.md"
+      },
+      {
+        "id": "form-required-marking",
+        "title": "Mark Required Clearly",
+        "severity": "high",
+        "summary": "Mark required fields with text 'Required' or '*' + legend. Don't rely on color alone.",
+        "path": "references/ux-rules/forms/form-required-marking.md"
+      },
+      {
+        "id": "form-help-text",
+        "title": "Helpful Help Text",
+        "severity": "medium",
+        "summary": "Persistent help text for non-obvious fields, below the input.",
+        "path": "references/ux-rules/forms/form-help-text.md"
+      },
+      {
+        "id": "form-validation-timing",
+        "title": "Validation Timing",
+        "severity": "high",
+        "summary": "Validate on blur (after user finishes), not on every keystroke. Re-validate on input after first error.",
+        "path": "references/ux-rules/forms/form-validation-timing.md"
+      },
+      {
+        "id": "form-success-state",
+        "title": "Success State After Submission",
+        "severity": "medium",
+        "summary": "Confirm submission clearly. Don't just refresh.",
+        "path": "references/ux-rules/forms/form-success-state.md"
+      },
+      {
+        "id": "form-prevent-data-loss",
+        "title": "Prevent Form Data Loss",
+        "severity": "high",
+        "summary": "Save drafts. Warn before navigation. Restore on accidental refresh.",
+        "path": "references/ux-rules/forms/form-prevent-data-loss.md"
+      },
+      {
+        "id": "form-password-ux",
+        "title": "Password UX",
+        "severity": "high",
+        "summary": "Show/hide toggle. Real-time strength feedback. Allow paste.",
+        "path": "references/ux-rules/forms/form-password-ux.md"
+      }
+    ]
+  }
+}

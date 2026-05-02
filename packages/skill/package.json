@@ -1,0 +1,38 @@
+{
+  "name": "@gapra/vyre-skill",
+  "version": "0.1.0",
+  "description": "AI skill for Vyre: 50+ UI styles, 150+ palettes, 90+ UX rules. Compatible with Claude Code, Cursor, Windsurf, Codex.",
+  "author": "gapra",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "SKILL.md",
+    "references/",
+    "scripts/",
+    "assets/",
+    "evals/",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./SKILL.md",
+    "./references/*": "./references/*",
+    "./scripts/*": "./scripts/*"
+  },
+  "scripts": {
+    "validate": "node scripts/validate-skill.mjs"
+  },
+  "keywords": [
+    "ai-skill",
+    "claude-skill",
+    "cursor-rules",
+    "windsurf-rules",
+    "agent-skill",
+    "design-system",
+    "ux-rules",
+    "ui-styles",
+    "vyre"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
