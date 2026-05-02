@@ -1,6 +1,6 @@
 {
   "name": "@gapra/vyre-skill",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "AI skill for Vyre: 50+ UI styles, 150+ palettes, 90+ UX rules. Compatible with Claude Code, Cursor, Windsurf, Codex.",
   "author": "gapra",
   "license": "MIT",
