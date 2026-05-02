@@ -1,6 +1,6 @@
 {
   "name": "@gapra/vyre-tokens",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "W3C DTCG-compliant design tokens for Vyre. OKLCH-native, framework-agnostic.",
   "author": "gapra",
   "license": "MIT",
