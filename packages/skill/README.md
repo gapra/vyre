@@ -11,6 +11,7 @@ pnpm add @gapra/vyre-skill
 ```
 
 [![npm](https://img.shields.io/npm/v/@gapra/vyre-skill)](https://www.npmjs.com/package/@gapra/vyre-skill)
+[![npm downloads](https://img.shields.io/npm/dm/@gapra/vyre-skill)](https://www.npmjs.com/package/@gapra/vyre-skill)
 [![license](https://img.shields.io/npm/l/@gapra/vyre-skill)](./LICENSE)
 
 ---
