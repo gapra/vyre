@@ -1,0 +1,38 @@
+{
+  "name": "@gapra/vyre-linter",
+  "version": "0.1.0",
+  "description": "Linter for Vyre design tokens and skill output. Validates DTCG 2025.10 schema, broken alias refs, WCAG/APCA contrast, and UX rule compliance.",
+  "author": "gapra",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "vyre-lint": "./src/cli.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./dtcg": "./src/dtcg-validator.mjs",
+    "./contrast": "./src/contrast.mjs",
+    "./refs": "./src/reference-resolver.mjs",
+    "./ux": "./src/ux-rule-checker.mjs",
+    "./cli": "./src/cli.mjs"
+  },
+  "files": [
+    "src/",
+    "README.md"
+  ],
+  "scripts": {
+    "lint:self": "node src/cli.mjs --tokens ../../packages/tokens/src --skill ../../packages/skill"
+  },
+  "keywords": [
+    "design-tokens",
+    "dtcg",
+    "linter",
+    "wcag",
+    "apca",
+    "a11y",
+    "vyre"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,51 @@
+name: Publish to npm
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'packages/tokens/package.json'
+      - 'packages/skill/package.json'
+
+jobs:
+  publish:
+    name: Publish packages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write   # npm trusted publishing (required after Nov 2025)
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build tokens
+        run: pnpm build:tokens
+
+      - name: Validate before publish
+        run: |
+          pnpm --filter @gapra/vyre-tokens validate
+          node packages/skill/scripts/audit-contrast.mjs --theme light
+          node packages/skill/scripts/audit-contrast.mjs --theme dark
+
+      - name: Publish @gapra/vyre-tokens
+        run: pnpm --filter @gapra/vyre-tokens publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish @gapra/vyre-skill
+        run: pnpm --filter @gapra/vyre-skill publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

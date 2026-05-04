@@ -1,172 +1,178 @@
 {
-  "version": 1,
-  "description": "Evaluation suite for vyre-design-system skill triggering and behavior.",
+  "version": 2,
+  "description": "Evaluation suite for @gapra/vyre-skill. Target: ≥95% trigger accuracy on should_trigger, ≤5% false positive on should_not_trigger.",
   "should_trigger": [
-    {
-      "input": "Build me a button component in React",
-      "reason": "Direct UI component request"
-    },
-    {
-      "input": "Help me pick colors for my dashboard",
-      "reason": "Color/theming request"
-    },
-    {
-      "input": "Make this card look more modern",
-      "reason": "Visual styling request"
-    },
-    {
-      "input": "Add dark mode to my app",
-      "reason": "Theming request"
-    },
-    {
-      "input": "Fix the spacing in this form",
-      "reason": "Layout/spacing request"
-    },
-    {
-      "input": "Improve the UI of my landing page",
-      "reason": "UI improvement"
-    },
-    {
-      "input": "Make it look good",
-      "reason": "Casual visual request"
-    },
-    {
-      "input": "Design a settings page for me",
-      "reason": "Page design"
-    },
-    {
-      "input": "Make it accessible",
-      "reason": "A11y request — should pull WCAG rules"
-    },
-    {
-      "input": "Add some style to this boring page",
-      "reason": "Aesthetic improvement"
-    },
-    {
-      "input": "Build a glassmorphism login",
-      "reason": "Specific UI style requested"
-    },
-    {
-      "input": "I need a brutalist landing page",
-      "reason": "Style-specific request"
-    },
-    {
-      "input": "Pick a palette for a finance app",
-      "reason": "Palette selection"
-    },
-    {
-      "input": "Add hover states to my buttons",
-      "reason": "Interaction design"
-    },
-    {
-      "input": "Why does my form feel cramped?",
-      "reason": "Layout/spacing diagnostic"
-    },
-    {
-      "input": "Add subtle animations to my cards",
-      "reason": "Motion design"
-    },
-    {
-      "input": "What font should I use?",
-      "reason": "Typography choice"
-    },
-    {
-      "input": "Make this responsive",
-      "reason": "Layout responsiveness"
-    },
-    {
-      "input": "Convert these inline styles to a design system",
-      "reason": "Token migration"
-    },
-    {
-      "input": "This needs more polish",
-      "reason": "Visual refinement"
-    }
+    { "input": "Build me a button component in React", "reason": "Direct UI component request" },
+    { "input": "Help me pick colors for my dashboard", "reason": "Color/theming request" },
+    { "input": "Make this card look more modern", "reason": "Visual styling request" },
+    { "input": "Add dark mode to my app", "reason": "Theming request" },
+    { "input": "Fix the spacing in this form", "reason": "Layout/spacing request" },
+    { "input": "Improve the UI of my landing page", "reason": "UI improvement" },
+    { "input": "Make it look good", "reason": "Casual vague visual request — must not slip through" },
+    { "input": "Design a settings page for me", "reason": "Page design" },
+    { "input": "Make it accessible", "reason": "A11y request — should pull WCAG rules" },
+    { "input": "Add some style to this boring page", "reason": "Aesthetic improvement" },
+    { "input": "Build a glassmorphism login", "reason": "Specific UI style requested" },
+    { "input": "I need a brutalist landing page", "reason": "Style-specific request" },
+    { "input": "Pick a palette for a finance app", "reason": "Palette selection" },
+    { "input": "Add hover states to my buttons", "reason": "Interaction design" },
+    { "input": "Why does my form feel cramped?", "reason": "Layout/spacing diagnostic" },
+    { "input": "Add subtle animations to my cards", "reason": "Motion design" },
+    { "input": "What font should I use?", "reason": "Typography choice" },
+    { "input": "Make this responsive", "reason": "Layout responsiveness" },
+    { "input": "Convert these inline styles to a design system", "reason": "Token migration" },
+    { "input": "This needs more polish", "reason": "Visual refinement — vague but clearly aesthetic" },
+    { "input": "Can you review my component for accessibility issues?", "reason": "A11y audit" },
+    { "input": "The contrast on this text is too low", "reason": "Explicit contrast/a11y mention" },
+    { "input": "Help me choose between these two color schemes", "reason": "Color decision — palette judgment" },
+    { "input": "My app feels outdated, what should I change?", "reason": "Visual modernization request" },
+    { "input": "Create a navigation bar component", "reason": "Component scaffold — UI" },
+    { "input": "This modal doesn't feel right", "reason": "Vague UI dissatisfaction — should trigger design system context" },
+    { "input": "Add a skeleton loader", "reason": "Loading state — motion + interaction rules" },
+    { "input": "I want a dashboard with bento grid layout", "reason": "Specific UI style (bento)" },
+    { "input": "Fix the typography hierarchy", "reason": "Type scale / hierarchy rules" },
+    { "input": "My users are complaining the buttons are too small on mobile", "reason": "Touch target size — a11y rule" },
+    { "input": "Make this feel more premium", "reason": "Vague premium/luxury request — maps to dark luxury or gallery-monochrome styles" },
+    { "input": "Add a focus indicator to the input", "reason": "Explicit focus/a11y request" },
+    { "input": "This form has too many fields, how do I organize it?", "reason": "Form UX rules" },
+    { "input": "The page feels too heavy, lighten it up", "reason": "Visual weight — whitespace, spacing" },
+    { "input": "Apply the aurora color palette", "reason": "Explicit palette name reference" },
+    { "input": "Give me a card with glassmorphism style for a hero section", "reason": "Style + component combination" },
+    { "input": "Use a warmer color scheme throughout", "reason": "Color mood request" },
+    { "input": "My error messages don't stand out enough", "reason": "Status colors + content copy rules" },
+    { "input": "Add a transition when the sidebar opens", "reason": "Motion — spatial continuity + easing rules" },
+    { "input": "Show me how to implement high contrast mode", "reason": "Theme modifier — high-contrast tokens" }
   ],
   "should_not_trigger": [
-    {
-      "input": "What is the capital of France?",
-      "reason": "Trivia, not UI"
-    },
-    {
-      "input": "Write a Python script to parse JSON",
-      "reason": "Backend/scripting, no UI"
-    },
-    {
-      "input": "How does TCP work?",
-      "reason": "Networking concept"
-    },
-    {
-      "input": "Help me debug my SQL query",
-      "reason": "Database, not UI"
-    },
-    {
-      "input": "Explain recursion to me",
-      "reason": "Concept explanation"
-    },
-    {
-      "input": "Write a unit test for this function",
-      "reason": "Testing, not UI"
-    },
-    {
-      "input": "Recommend a book on philosophy",
-      "reason": "Off-topic"
-    },
-    {
-      "input": "Calculate compound interest for $1000",
-      "reason": "Math problem"
-    },
-    {
-      "input": "Write a haiku about coffee",
-      "reason": "Creative writing"
-    },
-    {
-      "input": "Translate this sentence to Spanish",
-      "reason": "Translation task"
-    }
+    { "input": "What is the capital of France?", "reason": "Trivia, not UI" },
+    { "input": "Write a Python script to parse JSON", "reason": "Backend/scripting, no UI" },
+    { "input": "How does TCP work?", "reason": "Networking concept" },
+    { "input": "Help me debug my SQL query", "reason": "Database, not UI" },
+    { "input": "Explain recursion to me", "reason": "CS concept explanation" },
+    { "input": "Write a unit test for this function", "reason": "Testing, not UI" },
+    { "input": "Recommend a book on philosophy", "reason": "Off-topic" },
+    { "input": "Calculate compound interest for $1000", "reason": "Math problem" },
+    { "input": "Write a haiku about coffee", "reason": "Creative writing" },
+    { "input": "Translate this sentence to Spanish", "reason": "Translation task" },
+    { "input": "Fix this bug in my authentication middleware", "reason": "Backend bug fix — no UI concern" },
+    { "input": "Why is my Node.js server crashing?", "reason": "Server debugging" },
+    { "input": "How do I set up a PostgreSQL database?", "reason": "Infrastructure, not UI" },
+    { "input": "Explain the difference between REST and GraphQL", "reason": "API design concept — no visual component" },
+    { "input": "Write a function that sorts an array", "reason": "Algorithm — no UI" },
+    { "input": "How do I configure webpack?", "reason": "Build tooling, not design" },
+    { "input": "Optimize my database query", "reason": "Performance — backend" },
+    { "input": "Write a regex to validate email addresses", "reason": "Pattern matching — no UI" },
+    { "input": "Help me set up CI/CD for my project", "reason": "DevOps — no design concern" },
+    { "input": "What is the time complexity of binary search?", "reason": "CS theory" },
+    { "input": "Generate a random color", "reason": "Utility function — not a design decision; no palette or token context" },
+    { "input": "Convert hex to RGB", "reason": "Color math utility — no design system context" }
   ],
   "expected_behaviors": [
     {
       "scenario": "Build a button",
       "must_include": [
-        "Token references (var(--vyre-*) or bg-primary)",
-        "Both background AND foreground tokens paired",
-        "Hover state",
-        "Focus-visible ring",
-        "No raw hex colors"
+        "Token references (var(--vyre-*) or Tailwind class from @gapra/vyre-tokens)",
+        "Both background AND foreground tokens paired (e.g. interactive-primary + interactive-primary-foreground)",
+        "Hover state token (interactive-primary-hover)",
+        "Focus-visible ring using ring-default token",
+        "No raw hex colors",
+        "No hardcoded px spacing — use space-* tokens"
       ],
       "must_not_include": [
-        "Raw colors like #fff or #000",
-        "Hardcoded px spacing",
+        "Raw colors like #fff, #3b82f6, rgba(...)",
+        "Hardcoded px spacing like padding: 12px",
         "Inline styles with literal values"
       ]
     },
     {
       "scenario": "Pick a palette",
       "must_include": [
-        "Reference the palette manifest",
-        "Tag-based filtering reasoning",
-        "At least 2-3 palette suggestions",
-        "Justify each choice"
+        "Reference references/palettes/_index.json or references/styles/_index.json",
+        "Tag-based filtering reasoning (e.g. tags: dashboard, minimal, dark-only)",
+        "At least 2-3 palette suggestions with justification",
+        "Match palette personality to use case context"
       ]
     },
     {
       "scenario": "Make accessible",
       "must_include": [
-        "Focus indicators",
-        "Touch target sizes",
-        "Contrast guidance",
-        "Semantic HTML",
-        "ARIA where needed"
+        "Focus indicators with focus-visible ring token",
+        "Touch target sizes (≥44×44px per HIG, ≥48dp per Material)",
+        "APCA Lc 60 for text, Lc 45 for UI contrast guidance",
+        "Semantic HTML elements (button not div, label not span)",
+        "ARIA roles where native semantics are absent"
       ]
     },
     {
       "scenario": "Add animations",
       "must_include": [
-        "prefers-reduced-motion guard",
-        "Transform/opacity not layout properties",
-        "Duration token reference",
-        "Easing token reference"
+        "@media (prefers-reduced-motion: no-preference) guard wrapping all animations",
+        "transform or opacity — not layout properties (width, height, top, left)",
+        "Duration from motion-duration-* tokens",
+        "Easing from motion-easing-* tokens"
+      ]
+    },
+    {
+      "scenario": "Fix contrast issue",
+      "must_include": [
+        "APCA Lc score alongside WCAG ratio",
+        "Suggest a token pair from alias tokens (e.g. content-primary on surface-background)",
+        "Explain why specific tokens are paired"
+      ],
+      "must_not_include": [
+        "Arbitrary color adjustments without token references",
+        "Raw hex values as the fix"
+      ]
+    },
+    {
+      "scenario": "Apply glassmorphism style",
+      "must_include": [
+        "Reference references/styles/glassmorphism.md recipe",
+        "backdrop-filter: blur() with a specific px value from the recipe",
+        "surface-panel token with alpha (oklch from ... / 0.7)",
+        "border using border-subtle token with alpha",
+        "Accessibility note: ensure text contrast on blurred backgrounds"
+      ],
+      "must_not_include": [
+        "background-color: rgba(255,255,255,0.2) — must use token"
+      ]
+    },
+    {
+      "scenario": "Dark mode implementation",
+      "must_include": [
+        "Load @gapra/vyre-tokens/themes/dark CSS",
+        "[data-theme='dark'] selector or .dark class",
+        "Explain that alias tokens automatically remap — no duplicate CSS needed",
+        "JS toggle example: document.documentElement.setAttribute('data-theme', 'dark')"
+      ]
+    },
+    {
+      "scenario": "Design a form",
+      "must_include": [
+        "Single column layout for primary flow (form-single-column rule)",
+        "Labels above inputs (labels-not-placeholders rule)",
+        "Required field marking (form-required-marking rule)",
+        "Inline validation timing (form-validation-timing rule)",
+        "Token references for all spacing (space-2 for label gap, space-4 for field gap)"
+      ]
+    },
+    {
+      "scenario": "Typography hierarchy",
+      "must_include": [
+        "Font size tokens (font-size-xs through font-size-4xl)",
+        "Font weight tokens (font-weight-normal, medium, semibold, bold)",
+        "Line height tokens (leading-tight, normal, relaxed)",
+        "Maximum 3 type sizes per screen context",
+        "Heading hierarchy rule: no skipping h-levels"
+      ]
+    },
+    {
+      "scenario": "Choose between UI styles",
+      "must_include": [
+        "Load _index.json manifests for both styles",
+        "Compare contraindications and required_tokens",
+        "Consider performance_cost and accessibility_notes",
+        "Provide a clear recommendation with reasoning"
       ]
     }
   ]

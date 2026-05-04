@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-validate:
+    name: Build & Validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build tokens
+        run: pnpm build:tokens
+
+      - name: Validate token schema
+        run: pnpm --filter @gapra/vyre-tokens validate
+
+      - name: Contrast audit — light theme
+        run: node packages/skill/scripts/audit-contrast.mjs --theme light
+
+      - name: Contrast audit — dark theme
+        run: node packages/skill/scripts/audit-contrast.mjs --theme dark
+
+      - name: Validate skill
+        run: pnpm --filter @gapra/vyre-skill validate
+
+      - name: Upload dist as artifact
+        uses: actions/upload-artifact@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          name: tokens-dist
+          path: packages/tokens/dist/
+          retention-days: 7
