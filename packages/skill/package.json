@@ -1,6 +1,6 @@
 {
   "name": "@gapra/vyre-skill",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "AI skill for frontend design: 50+ UI styles, 177 palettes, 90+ UX rules. Works with Claude Code, Cursor, Windsurf, Copilot, Codex.",
   "author": "gapra",
   "license": "MIT",
