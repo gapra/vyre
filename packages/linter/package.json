@@ -32,6 +32,9 @@
     "a11y",
     "vyre"
   ],
+  "engines": {
+    "node": ">=20"
+  },
   "publishConfig": {
     "access": "public"
   }
