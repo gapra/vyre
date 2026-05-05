@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert — Vyre Examples</title>
+  <link rel="stylesheet" href="_preview.css">
+  <link rel="stylesheet" href="alert.css">
+</head>
+<body>
+<div class="demo-page">
+
+  <header class="demo-header">
+    <p class="demo-header__eyebrow">@gapra/vyre-skill</p>
+    <h1 class="demo-header__title">Alert</h1>
+    <p class="demo-header__desc">System feedback messages for success, warning, danger, and informational states.</p>
+  </header>
+
+  <!-- Status variants -->
+  <section class="demo-section">
+    <p class="demo-section__label">Status variants</p>
+    <div class="demo-col">
+
+      <div class="alert alert--success" role="alert">
+        <svg class="alert__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5z" clip-rule="evenodd"/>
+        </svg>
+        <div class="alert__content">
+          <p class="alert__title">Changes saved</p>
+          <p class="alert__body">Your profile has been updated successfully.</p>
+        </div>
+      </div>
+
+      <div class="alert alert--warning" role="alert">
+        <svg class="alert__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 10 5zm0 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" clip-rule="evenodd"/>
+        </svg>
+        <div class="alert__content">
+          <p class="alert__title">Free plan limit approaching</p>
+          <p class="alert__body">You've used 80% of your monthly budget. <a class="alert__link" href="#" onclick="return false">Upgrade your plan</a> to continue.</p>
+        </div>
+      </div>
+
+      <div class="alert alert--danger" role="alert">
+        <svg class="alert__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM8.28 7.22a.75.75 0 0 0-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 1 0 1.06 1.06L10 11.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L11.06 10l1.72-1.72a.75.75 0 0 0-1.06-1.06L10 8.94 8.28 7.22z" clip-rule="evenodd"/>
+        </svg>
+        <div class="alert__content">
+          <p class="alert__title">Payment failed</p>
+          <p class="alert__body">We couldn't process your payment. Please check your card details and try again.</p>
+        </div>
+      </div>
+
+      <div class="alert alert--info" role="status">
+        <svg class="alert__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9z" clip-rule="evenodd"/>
+        </svg>
+        <div class="alert__content">
+          <p class="alert__title">Maintenance scheduled</p>
+          <p class="alert__body">The system will be unavailable on Sunday from 02:00–04:00 UTC.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="demo-divider">
+
+  <!-- Dismissible -->
+  <section class="demo-section">
+    <p class="demo-section__label">Dismissible</p>
+    <div class="demo-col">
+      <div class="alert alert--info alert--dismissible" role="status">
+        <svg class="alert__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9z" clip-rule="evenodd"/>
+        </svg>
+        <div class="alert__content">
+          <p class="alert__body">New version available. Reload to get the latest features.</p>
+        </div>
+        <button class="alert__dismiss" type="button" aria-label="Dismiss" onclick="this.closest('.alert').remove()">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="alert alert--success alert--dismissible" role="alert">
+        <svg class="alert__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5z" clip-rule="evenodd"/>
+        </svg>
+        <div class="alert__content">
+          <p class="alert__title">Invitation sent</p>
+          <p class="alert__body">Team member has been invited and will receive an email shortly.</p>
+        </div>
+        <button class="alert__dismiss" type="button" aria-label="Dismiss" onclick="this.closest('.alert').remove()">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

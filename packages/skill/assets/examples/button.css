@@ -1,0 +1,191 @@
+/*
+ * @component  button
+ * @requires   @gapra/vyre-tokens/css
+ *
+ * ZERO raw values — all visual properties reference var(--vyre-*)
+ */
+
+/* ── Base button ─────────────────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--vyre-space-2);
+
+  padding-inline: var(--vyre-space-4);
+  padding-block: var(--vyre-space-2);
+
+  font-family: var(--vyre-font-family-sans);
+  font-size: var(--vyre-font-size-sm);
+  font-weight: var(--vyre-font-weight-medium);
+  line-height: var(--vyre-font-line-height-normal);
+  white-space: nowrap;
+  text-decoration: none;
+
+  border: var(--vyre-border-width-1) solid transparent;
+  border-radius: var(--vyre-radius-md);
+  cursor: pointer;
+  user-select: none;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      background-color var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard),
+      color            var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard),
+      border-color     var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard),
+      box-shadow       var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard),
+      opacity          var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard);
+  }
+}
+
+.btn:focus-visible {
+  outline: var(--vyre-border-width-2) solid var(--vyre-ring-default);
+  outline-offset: var(--vyre-space-0-5);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Variants ────────────────────────────────────────────────────────────── */
+
+.btn--primary {
+  background-color: var(--vyre-interactive-primary);
+  color: var(--vyre-interactive-primary-foreground);
+  border-color: var(--vyre-interactive-primary);
+}
+
+.btn--primary:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--vyre-interactive-primary-hover);
+  border-color: var(--vyre-interactive-primary-hover);
+}
+
+.btn--primary:active:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--vyre-interactive-primary-active);
+  border-color: var(--vyre-interactive-primary-active);
+}
+
+.btn--secondary {
+  background-color: var(--vyre-interactive-secondary);
+  color: var(--vyre-interactive-secondary-foreground);
+  border-color: var(--vyre-border-default);
+}
+
+.btn--secondary:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--vyre-interactive-secondary-hover);
+}
+
+.btn--secondary:active:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--vyre-interactive-secondary-active);
+}
+
+.btn--ghost {
+  background-color: var(--vyre-interactive-ghost);
+  color: var(--vyre-interactive-ghost-foreground);
+  border-color: transparent;
+}
+
+.btn--ghost:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--vyre-interactive-ghost-hover);
+}
+
+.btn--destructive {
+  background-color: var(--vyre-interactive-destructive);
+  color: var(--vyre-interactive-destructive-foreground);
+  border-color: var(--vyre-interactive-destructive);
+}
+
+.btn--destructive:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--vyre-interactive-destructive-hover);
+  border-color: var(--vyre-interactive-destructive-hover);
+}
+
+/* ── Size variants ───────────────────────────────────────────────────────── */
+
+.btn--sm {
+  padding-inline: var(--vyre-space-3);
+  padding-block: var(--vyre-space-1);
+  font-size: var(--vyre-font-size-xs);
+  border-radius: var(--vyre-radius-sm);
+}
+
+.btn--lg {
+  padding-inline: var(--vyre-space-6);
+  padding-block: var(--vyre-space-3);
+  font-size: var(--vyre-font-size-base);
+  border-radius: var(--vyre-radius-lg);
+}
+
+/* ── Icon variants ───────────────────────────────────────────────────────── */
+
+.btn__icon {
+  flex-shrink: 0;
+  width: var(--vyre-space-4);
+  height: var(--vyre-space-4);
+}
+
+.btn--icon-only {
+  padding: var(--vyre-space-2);
+  aspect-ratio: 1;
+}
+
+/* ── Loading state ───────────────────────────────────────────────────────── */
+
+.btn--loading {
+  cursor: wait;
+}
+
+.btn__spinner {
+  display: inline-block;
+  width: var(--vyre-space-4);
+  height: var(--vyre-space-4);
+  border: var(--vyre-border-width-2) solid currentColor;
+  border-top-color: transparent;
+  border-radius: var(--vyre-radius-full);
+  flex-shrink: 0;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: btn-spin var(--vyre-motion-duration-slow) linear infinite;
+  }
+}
+
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Button group ────────────────────────────────────────────────────────── */
+
+.btn-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-group .btn {
+  border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+  border-start-start-radius: var(--vyre-radius-md);
+  border-end-start-radius: var(--vyre-radius-md);
+}
+
+.btn-group .btn:last-child {
+  border-start-end-radius: var(--vyre-radius-md);
+  border-end-end-radius: var(--vyre-radius-md);
+}
+
+.btn-group .btn + .btn {
+  border-inline-start-width: 0;
+}
+
+.btn-group .btn:focus-visible {
+  z-index: 1;
+}
+
+.btn-group .btn[aria-pressed="true"] {
+  background-color: var(--vyre-interactive-secondary-hover);
+  font-weight: var(--vyre-font-weight-semibold);
+}

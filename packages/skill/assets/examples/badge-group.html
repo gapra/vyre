@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badge — Vyre Examples</title>
+  <link rel="stylesheet" href="_preview.css">
+  <link rel="stylesheet" href="badge-group.css">
+</head>
+<body>
+<div class="demo-page">
+
+  <header class="demo-header">
+    <p class="demo-header__eyebrow">@gapra/vyre-skill</p>
+    <h1 class="demo-header__title">Badge</h1>
+    <p class="demo-header__desc">Compact label for status, category, and count. Always pairs color with text — never color alone.</p>
+  </header>
+
+  <!-- Solid -->
+  <section class="demo-section">
+    <p class="demo-section__label">Solid</p>
+    <div class="badge-group">
+      <span class="badge badge--success-solid">Success</span>
+      <span class="badge badge--warning-solid">Warning</span>
+      <span class="badge badge--danger-solid">Danger</span>
+      <span class="badge badge--info-solid">Info</span>
+      <span class="badge badge--neutral-solid">Neutral</span>
+    </div>
+  </section>
+
+  <hr class="demo-divider">
+
+  <!-- Subtle -->
+  <section class="demo-section">
+    <p class="demo-section__label">Subtle (preferred for inline status)</p>
+    <div class="badge-group">
+      <span class="badge badge--success-subtle">Active</span>
+      <span class="badge badge--warning-subtle">Pending</span>
+      <span class="badge badge--danger-subtle">Failed</span>
+      <span class="badge badge--info-subtle">In review</span>
+      <span class="badge badge--neutral-subtle">Draft</span>
+    </div>
+  </section>
+
+  <hr class="demo-divider">
+
+  <!-- Dot indicator -->
+  <section class="demo-section">
+    <p class="demo-section__label">With dot indicator</p>
+    <div class="badge-group">
+      <span class="badge badge--success-subtle badge--dot">
+        <span class="badge__dot" aria-hidden="true"></span>
+        Online
+      </span>
+      <span class="badge badge--warning-subtle badge--dot">
+        <span class="badge__dot" aria-hidden="true"></span>
+        Away
+      </span>
+      <span class="badge badge--neutral-subtle badge--dot">
+        <span class="badge__dot" aria-hidden="true"></span>
+        Offline
+      </span>
+    </div>
+  </section>
+
+  <hr class="demo-divider">
+
+  <!-- Tags -->
+  <section class="demo-section">
+    <p class="demo-section__label">Removable tags</p>
+    <div class="badge-group">
+      <span class="badge badge--tag">
+        design-tokens
+        <button class="badge__remove" type="button" aria-label="Remove tag: design-tokens">
+          <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <path d="M2.22 2.22a.75.75 0 0 1 1.06 0L6 4.94l2.72-2.72a.75.75 0 1 1 1.06 1.06L7.06 6l2.72 2.72a.75.75 0 1 1-1.06 1.06L6 7.06 3.28 9.78a.75.75 0 0 1-1.06-1.06L4.94 6 2.22 3.28a.75.75 0 0 1 0-1.06z"/>
+          </svg>
+        </button>
+      </span>
+      <span class="badge badge--tag">
+        accessibility
+        <button class="badge__remove" type="button" aria-label="Remove tag: accessibility">
+          <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <path d="M2.22 2.22a.75.75 0 0 1 1.06 0L6 4.94l2.72-2.72a.75.75 0 1 1 1.06 1.06L7.06 6l2.72 2.72a.75.75 0 1 1-1.06 1.06L6 7.06 3.28 9.78a.75.75 0 0 1-1.06-1.06L4.94 6 2.22 3.28a.75.75 0 0 1 0-1.06z"/>
+          </svg>
+        </button>
+      </span>
+      <span class="badge badge--tag">
+        oklch
+        <button class="badge__remove" type="button" aria-label="Remove tag: oklch">
+          <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <path d="M2.22 2.22a.75.75 0 0 1 1.06 0L6 4.94l2.72-2.72a.75.75 0 1 1 1.06 1.06L7.06 6l2.72 2.72a.75.75 0 1 1-1.06 1.06L6 7.06 3.28 9.78a.75.75 0 0 1-1.06-1.06L4.94 6 2.22 3.28a.75.75 0 0 1 0-1.06z"/>
+          </svg>
+        </button>
+      </span>
+    </div>
+  </section>
+
+  <hr class="demo-divider">
+
+  <!-- Count badges -->
+  <section class="demo-section">
+    <p class="demo-section__label">Count / numeric</p>
+    <div class="badge-group">
+      <span class="badge badge--count badge--danger-solid" aria-label="5 unread">5</span>
+      <span class="badge badge--count badge--neutral-solid" aria-label="12 items">12</span>
+      <span class="badge badge--count badge--info-solid" aria-label="99 or more">99+</span>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

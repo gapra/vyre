@@ -1,0 +1,116 @@
+/*
+ * @component  alert
+ * @requires   @gapra/vyre-tokens/css
+ *
+ * ZERO raw values — all visual properties reference var(--vyre-*)
+ */
+
+/* ── Base alert ──────────────────────────────────────────────────────────── */
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--vyre-space-3);
+  padding: var(--vyre-space-4);
+  border-radius: var(--vyre-radius-md);
+  border: var(--vyre-border-width-1) solid transparent;
+  font-family: var(--vyre-font-family-sans);
+  font-size: var(--vyre-font-size-sm);
+  line-height: var(--vyre-font-line-height-normal);
+}
+
+/* ── Icon ────────────────────────────────────────────────────────────────── */
+
+.alert__icon {
+  flex-shrink: 0;
+  margin-block-start: var(--vyre-space-px);
+}
+
+/* ── Content ─────────────────────────────────────────────────────────────── */
+
+.alert__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--vyre-space-1);
+}
+
+.alert__title {
+  font-weight: var(--vyre-font-weight-semibold);
+  margin: 0;
+}
+
+.alert__body {
+  margin: 0;
+}
+
+.alert__link {
+  font-weight: var(--vyre-font-weight-medium);
+  text-decoration: underline;
+  text-underline-offset: var(--vyre-space-0-5);
+  color: inherit;
+}
+
+/* ── Dismiss button ──────────────────────────────────────────────────────── */
+
+.alert__dismiss {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--vyre-space-0-5);
+  margin: calc(-1 * var(--vyre-space-0-5));
+  background: transparent;
+  border: none;
+  border-radius: var(--vyre-radius-sm);
+  color: inherit;
+  opacity: 0.7;
+  cursor: pointer;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard);
+  }
+}
+
+.alert__dismiss:hover {
+  opacity: 1;
+}
+
+.alert__dismiss:focus-visible {
+  outline: var(--vyre-border-width-2) solid currentColor;
+  outline-offset: var(--vyre-space-0-5);
+  opacity: 1;
+}
+
+/* ── Status variants ─────────────────────────────────────────────────────── */
+
+.alert--success {
+  background-color: var(--vyre-status-success-subtle);
+  color: var(--vyre-status-success-subtle-foreground);
+  border-color: var(--vyre-status-success-border);
+}
+
+.alert--warning {
+  background-color: var(--vyre-status-warning-subtle);
+  color: var(--vyre-status-warning-subtle-foreground);
+  border-color: var(--vyre-status-warning-border);
+}
+
+.alert--danger {
+  background-color: var(--vyre-status-danger-subtle);
+  color: var(--vyre-status-danger-subtle-foreground);
+  border-color: var(--vyre-status-danger-border);
+}
+
+.alert--info {
+  background-color: var(--vyre-status-info-subtle);
+  color: var(--vyre-status-info-subtle-foreground);
+  border-color: var(--vyre-status-info-border);
+}
+
+/* ── Dismissible layout ──────────────────────────────────────────────────── */
+
+.alert--dismissible {
+  padding-inline-end: var(--vyre-space-3);
+}

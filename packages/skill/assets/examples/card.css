@@ -1,0 +1,149 @@
+/*
+ * @component  card
+ * @requires   @gapra/vyre-tokens/css
+ *
+ * ZERO raw values — all visual properties reference var(--vyre-*)
+ */
+
+/* ── Base card ───────────────────────────────────────────────────────────── */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--vyre-surface-card);
+  border: var(--vyre-border-width-1) solid var(--vyre-border-subtle);
+  border-radius: var(--vyre-radius-lg);
+  box-shadow: var(--vyre-shadow-sm);
+  overflow: hidden;
+}
+
+/* ── Sub-regions ─────────────────────────────────────────────────────────── */
+
+.card__header {
+  padding: var(--vyre-space-4) var(--vyre-space-6);
+  border-block-end: var(--vyre-border-width-1) solid var(--vyre-border-subtle);
+}
+
+.card__body {
+  flex: 1;
+  padding: var(--vyre-space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--vyre-space-2);
+}
+
+.card__footer {
+  padding: var(--vyre-space-4) var(--vyre-space-6);
+  border-block-start: var(--vyre-border-width-1) solid var(--vyre-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--vyre-space-3);
+  background-color: var(--vyre-surface-subtle);
+}
+
+/* ── Typography inside card ──────────────────────────────────────────────── */
+
+.card__title {
+  font-family: var(--vyre-font-family-sans);
+  font-size: var(--vyre-font-size-lg);
+  font-weight: var(--vyre-font-weight-semibold);
+  color: var(--vyre-content-primary);
+  line-height: var(--vyre-font-line-height-tight);
+  margin: 0;
+}
+
+.card__subtitle {
+  font-size: var(--vyre-font-size-sm);
+  color: var(--vyre-content-secondary);
+  margin: var(--vyre-space-1) 0 0;
+}
+
+.card__description {
+  font-size: var(--vyre-font-size-sm);
+  color: var(--vyre-content-secondary);
+  line-height: var(--vyre-font-line-height-relaxed);
+  margin: 0;
+}
+
+.card__badge {
+  display: inline-block;
+  font-size: var(--vyre-font-size-xs);
+  font-weight: var(--vyre-font-weight-semibold);
+  color: var(--vyre-interactive-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--vyre-font-letter-spacing-wide);
+  margin: 0 0 var(--vyre-space-2);
+}
+
+.card__cta {
+  font-size: var(--vyre-font-size-sm);
+  font-weight: var(--vyre-font-weight-medium);
+  color: var(--vyre-content-link);
+}
+
+.card__link {
+  font-size: var(--vyre-font-size-sm);
+  font-weight: var(--vyre-font-weight-medium);
+  color: var(--vyre-content-link);
+  text-decoration: underline;
+  text-underline-offset: var(--vyre-space-0-5);
+}
+
+.card__link:hover {
+  color: var(--vyre-content-link-hover);
+}
+
+/* ── Interactive / clickable card ────────────────────────────────────────── */
+
+.card--interactive {
+  text-decoration: none;
+  cursor: pointer;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      box-shadow   var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard),
+      border-color var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard),
+      transform    var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard);
+  }
+}
+
+.card--interactive:hover {
+  box-shadow: var(--vyre-shadow-md);
+  border-color: var(--vyre-border-interactive);
+  transform: translateY(-1px);
+}
+
+.card--interactive:focus-visible {
+  outline: var(--vyre-border-width-2) solid var(--vyre-ring-default);
+  outline-offset: var(--vyre-space-0-5);
+}
+
+.card--interactive:active {
+  transform: translateY(0);
+  box-shadow: var(--vyre-shadow-xs);
+}
+
+/* ── Featured / elevated card ────────────────────────────────────────────── */
+
+.card--featured {
+  border-color: var(--vyre-border-interactive);
+  box-shadow: var(--vyre-shadow-lg);
+}
+
+/* ── Horizontal card ─────────────────────────────────────────────────────── */
+
+.card--horizontal {
+  flex-direction: row;
+}
+
+.card--horizontal .card__media {
+  flex-shrink: 0;
+  width: var(--vyre-space-32);
+  background-color: var(--vyre-surface-muted);
+  min-height: var(--vyre-space-24);
+}
+
+.card--horizontal .card__body {
+  padding: var(--vyre-space-4) var(--vyre-space-5);
+}

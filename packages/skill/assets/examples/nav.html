@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nav — Vyre Examples</title>
+  <link rel="stylesheet" href="_preview.css">
+  <link rel="stylesheet" href="button.css">
+  <link rel="stylesheet" href="nav.css">
+</head>
+<body style="padding: 0; background-color: var(--vyre-surface-background);">
+
+<!-- Skip link (first focusable element) -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- Nav component -->
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="nav__brand" href="#" onclick="return false" aria-label="Vyre — go to homepage">
+      <span class="nav__logo" aria-hidden="true">V</span>
+      <span class="nav__brand-name">Vyre</span>
+    </a>
+
+    <ul class="nav__list" role="list">
+      <li class="nav__item">
+        <a class="nav__link nav__link--active" href="#" aria-current="page" onclick="return false">Docs</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#" onclick="return false">Components</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#" onclick="return false">Palettes</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#" onclick="return false">Blog</a>
+      </li>
+    </ul>
+
+    <div class="nav__actions">
+      <a class="nav__link" href="#" aria-label="GitHub" onclick="return false">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+      </a>
+      <button class="btn btn--primary btn--sm" type="button">Get started</button>
+    </div>
+
+    <button
+      class="nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Open menu"
+      onclick="
+        const btn = this;
+        const menu = document.getElementById('mobile-menu');
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        menu.hidden = open;
+      "
+    >
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75zm0 5A.75.75 0 0 1 2.75 9h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 9.75zm0 5A.75.75 0 0 1 2.75 14h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 14.75z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+  </nav>
+
+  <div class="nav__mobile-menu" id="mobile-menu" hidden>
+    <ul class="nav__mobile-list" role="list">
+      <li><a class="nav__mobile-link nav__link--active" href="#" aria-current="page" onclick="return false">Docs</a></li>
+      <li><a class="nav__mobile-link" href="#" onclick="return false">Components</a></li>
+      <li><a class="nav__mobile-link" href="#" onclick="return false">Palettes</a></li>
+      <li><a class="nav__mobile-link" href="#" onclick="return false">Blog</a></li>
+    </ul>
+    <div class="nav__mobile-actions">
+      <button class="btn btn--primary" type="button">Get started</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content" tabindex="-1" style="padding: var(--vyre-space-10) var(--vyre-space-6); max-width: 800px; margin: 0 auto;">
+  <h1 style="font-size: var(--vyre-font-size-2xl); font-weight: var(--vyre-font-weight-bold); color: var(--vyre-content-primary); margin: 0 0 var(--vyre-space-3);">Navigation</h1>
+  <p style="color: var(--vyre-content-secondary); margin: 0;">
+    Sticky top bar with brand, nav links, and actions. Resize the window to see the mobile toggle.
+    The skip link appears on keyboard focus (press Tab).
+  </p>
+</main>
+
+</body>
+</html>

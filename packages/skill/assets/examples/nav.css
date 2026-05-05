@@ -1,0 +1,241 @@
+/*
+ * @component  nav
+ * @requires   @gapra/vyre-tokens/css
+ *
+ * ZERO raw values — all visual properties reference var(--vyre-*)
+ */
+
+/* ── Skip link (accessibility) ───────────────────────────────────────────── */
+
+.skip-link {
+  position: absolute;
+  inset-block-start: var(--vyre-space-2);
+  inset-inline-start: var(--vyre-space-2);
+  z-index: 100;
+  padding: var(--vyre-space-2) var(--vyre-space-4);
+  background-color: var(--vyre-surface-panel);
+  color: var(--vyre-content-primary);
+  border: var(--vyre-border-width-2) solid var(--vyre-ring-default);
+  border-radius: var(--vyre-radius-md);
+  font-family: var(--vyre-font-family-sans);
+  font-size: var(--vyre-font-size-sm);
+  font-weight: var(--vyre-font-weight-medium);
+  text-decoration: none;
+  transform: translateY(-200%);
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform var(--vyre-motion-duration-fast) var(--vyre-motion-easing-enter);
+  }
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ── Site header ─────────────────────────────────────────────────────────── */
+
+.site-header {
+  background-color: var(--vyre-surface-panel);
+  border-block-end: var(--vyre-border-width-1) solid var(--vyre-border-subtle);
+  box-shadow: var(--vyre-shadow-xs);
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 50;
+}
+
+/* ── Nav container ───────────────────────────────────────────────────────── */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--vyre-space-8);
+  padding-inline: var(--vyre-space-6);
+  padding-block: var(--vyre-space-3);
+  max-width: var(--vyre-space-64);
+  margin-inline: auto;
+}
+
+/* ── Brand / logo ────────────────────────────────────────────────────────── */
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--vyre-space-2);
+  text-decoration: none;
+  color: var(--vyre-content-primary);
+  flex-shrink: 0;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard);
+  }
+}
+
+.nav__brand:hover { opacity: 0.8; }
+
+.nav__brand:focus-visible {
+  outline: var(--vyre-border-width-2) solid var(--vyre-ring-default);
+  outline-offset: var(--vyre-space-1);
+  border-radius: var(--vyre-radius-sm);
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--vyre-space-8);
+  height: var(--vyre-space-8);
+  background-color: var(--vyre-interactive-primary);
+  color: var(--vyre-interactive-primary-foreground);
+  border-radius: var(--vyre-radius-md);
+  font-family: var(--vyre-font-family-display);
+  font-size: var(--vyre-font-size-base);
+  font-weight: var(--vyre-font-weight-bold);
+}
+
+.nav__brand-name {
+  font-family: var(--vyre-font-family-sans);
+  font-size: var(--vyre-font-size-base);
+  font-weight: var(--vyre-font-weight-semibold);
+  color: var(--vyre-content-primary);
+}
+
+/* ── Primary nav list ────────────────────────────────────────────────────── */
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--vyre-space-1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  padding-inline: var(--vyre-space-3);
+  padding-block: var(--vyre-space-2);
+  font-family: var(--vyre-font-family-sans);
+  font-size: var(--vyre-font-size-sm);
+  font-weight: var(--vyre-font-weight-medium);
+  color: var(--vyre-content-secondary);
+  text-decoration: none;
+  border-radius: var(--vyre-radius-md);
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      background-color var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard),
+      color            var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard);
+  }
+}
+
+.nav__link:hover {
+  background-color: var(--vyre-surface-subtle);
+  color: var(--vyre-content-primary);
+}
+
+.nav__link:focus-visible {
+  outline: var(--vyre-border-width-2) solid var(--vyre-ring-default);
+  outline-offset: var(--vyre-space-0-5);
+}
+
+.nav__link--active {
+  background-color: var(--vyre-interactive-primary-subtle);
+  color: var(--vyre-interactive-primary);
+  font-weight: var(--vyre-font-weight-semibold);
+}
+
+/* ── Right-side actions ──────────────────────────────────────────────────── */
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--vyre-space-3);
+  margin-inline-start: auto;
+}
+
+/* ── Mobile toggle (hidden on wide screens) ──────────────────────────────── */
+
+.nav__toggle {
+  display: none;
+  padding: var(--vyre-space-2);
+  background: transparent;
+  border: none;
+  border-radius: var(--vyre-radius-md);
+  color: var(--vyre-content-secondary);
+  cursor: pointer;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: background-color var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard);
+  }
+}
+
+.nav__toggle:hover {
+  background-color: var(--vyre-surface-subtle);
+}
+
+.nav__toggle:focus-visible {
+  outline: var(--vyre-border-width-2) solid var(--vyre-ring-default);
+  outline-offset: var(--vyre-space-0-5);
+}
+
+/* ── Mobile menu ─────────────────────────────────────────────────────────── */
+
+.nav__mobile-menu {
+  border-block-start: var(--vyre-border-width-1) solid var(--vyre-border-subtle);
+  padding: var(--vyre-space-4) var(--vyre-space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--vyre-space-4);
+}
+
+.nav__mobile-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--vyre-space-1);
+}
+
+.nav__mobile-link {
+  display: block;
+  padding: var(--vyre-space-2) var(--vyre-space-3);
+  font-size: var(--vyre-font-size-base);
+  font-weight: var(--vyre-font-weight-medium);
+  color: var(--vyre-content-secondary);
+  text-decoration: none;
+  border-radius: var(--vyre-radius-md);
+}
+
+.nav__mobile-link:hover,
+.nav__mobile-link--active {
+  background-color: var(--vyre-surface-subtle);
+  color: var(--vyre-content-primary);
+}
+
+.nav__mobile-actions {
+  padding-block-start: var(--vyre-space-2);
+  border-block-start: var(--vyre-border-width-1) solid var(--vyre-border-subtle);
+}
+
+/* ── Responsive breakpoint ───────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .nav__list,
+  .nav__actions {
+    display: none;
+  }
+
+  .nav__toggle {
+    display: flex;
+    margin-inline-start: auto;
+  }
+}
+
+/* ── Main content anchor ─────────────────────────────────────────────────── */
+
+#main-content:focus {
+  outline: none;
+}

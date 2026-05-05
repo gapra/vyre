@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card — Vyre Examples</title>
+  <link rel="stylesheet" href="_preview.css">
+  <link rel="stylesheet" href="button.css">
+  <link rel="stylesheet" href="card.css">
+  <style>
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--vyre-space-6);
+    }
+  </style>
+</head>
+<body>
+<div class="demo-page">
+
+  <header class="demo-header">
+    <p class="demo-header__eyebrow">@gapra/vyre-skill</p>
+    <h1 class="demo-header__title">Card</h1>
+    <p class="demo-header__desc">Content container with optional header, body, and footer regions.</p>
+  </header>
+
+  <!-- Default card -->
+  <section class="demo-section">
+    <p class="demo-section__label">Default</p>
+    <div class="demo-grid">
+      <article class="card">
+        <div class="card__body">
+          <h2 class="card__title">Card title</h2>
+          <p class="card__description">A clear, concise description of the content. Keep it focused on what the user needs to know.</p>
+        </div>
+        <div class="card__footer">
+          <button class="btn btn--secondary" type="button">Cancel</button>
+          <button class="btn btn--primary" type="button">Confirm</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <header class="card__header">
+          <h2 class="card__title">Analytics overview</h2>
+          <p class="card__subtitle">Last 30 days</p>
+        </header>
+        <div class="card__body">
+          <p class="card__description">Content goes here. The header establishes context; the body delivers the substance.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="demo-divider">
+
+  <!-- Interactive card -->
+  <section class="demo-section">
+    <p class="demo-section__label">Interactive (clickable)</p>
+    <div class="demo-grid">
+      <a class="card card--interactive" href="#" aria-label="View project: Design System" onclick="return false">
+        <div class="card__body">
+          <h2 class="card__title">Design System</h2>
+          <p class="card__description">Token-based, accessible, framework-agnostic. 177 palettes. 90 UX rules.</p>
+        </div>
+        <div class="card__footer">
+          <span class="card__cta" aria-hidden="true">View project →</span>
+        </div>
+      </a>
+
+      <a class="card card--interactive" href="#" aria-label="View project: Linter" onclick="return false">
+        <div class="card__body">
+          <h2 class="card__title">Linter</h2>
+          <p class="card__description">DTCG schema validation, broken alias detection, WCAG/APCA contrast audit.</p>
+        </div>
+        <div class="card__footer">
+          <span class="card__cta" aria-hidden="true">View project →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <hr class="demo-divider">
+
+  <!-- Featured card -->
+  <section class="demo-section">
+    <p class="demo-section__label">Featured</p>
+    <div style="max-width: 320px;">
+      <article class="card card--featured">
+        <div class="card__body">
+          <p class="card__badge">Featured</p>
+          <h2 class="card__title">Pro plan</h2>
+          <p class="card__description">Everything in Free, plus advanced analytics, priority support, and custom domains.</p>
+        </div>
+        <div class="card__footer">
+          <button class="btn btn--primary" type="button">Get started</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="demo-divider">
+
+  <!-- Horizontal card -->
+  <section class="demo-section">
+    <p class="demo-section__label">Horizontal</p>
+    <div style="max-width: 500px;">
+      <article class="card card--horizontal">
+        <div class="card__media" aria-hidden="true"></div>
+        <div class="card__body">
+          <h2 class="card__title">Getting started guide</h2>
+          <p class="card__description">Learn how to integrate Vyre tokens in under 5 minutes.</p>
+          <a class="card__link" href="#" onclick="return false">Read the guide →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

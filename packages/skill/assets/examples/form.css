@@ -1,0 +1,280 @@
+/*
+ * @component  form
+ * @requires   @gapra/vyre-tokens/css
+ *
+ * ZERO raw values — all visual properties reference var(--vyre-*)
+ */
+
+/* ── Form container ──────────────────────────────────────────────────────── */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--vyre-space-5);
+  width: 100%;
+  font-family: var(--vyre-font-family-sans);
+}
+
+/* ── Form header ─────────────────────────────────────────────────────────── */
+
+.form__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--vyre-space-1);
+}
+
+.form__title {
+  font-size: var(--vyre-font-size-2xl);
+  font-weight: var(--vyre-font-weight-bold);
+  color: var(--vyre-content-primary);
+  line-height: var(--vyre-font-line-height-tight);
+  margin: 0;
+}
+
+.form__subtitle {
+  font-size: var(--vyre-font-size-sm);
+  color: var(--vyre-content-secondary);
+  margin: 0;
+}
+
+.form__link {
+  color: var(--vyre-content-link);
+  text-decoration: underline;
+  text-underline-offset: var(--vyre-space-0-5);
+  font-weight: var(--vyre-font-weight-medium);
+}
+
+.form__link:hover {
+  color: var(--vyre-content-link-hover);
+}
+
+/* ── Field wrapper ───────────────────────────────────────────────────────── */
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--vyre-space-1);
+}
+
+/* ── Label ───────────────────────────────────────────────────────────────── */
+
+.form__label {
+  display: flex;
+  align-items: center;
+  gap: var(--vyre-space-1);
+  font-size: var(--vyre-font-size-sm);
+  font-weight: var(--vyre-font-weight-medium);
+  color: var(--vyre-content-primary);
+  cursor: pointer;
+}
+
+.form__required {
+  color: var(--vyre-status-danger-solid);
+  font-weight: var(--vyre-font-weight-bold);
+  line-height: 1;
+}
+
+/* ── Input ───────────────────────────────────────────────────────────────── */
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding-inline: var(--vyre-space-3);
+  padding-block: var(--vyre-space-2);
+  font-family: var(--vyre-font-family-sans);
+  font-size: var(--vyre-font-size-sm);
+  color: var(--vyre-content-primary);
+  background-color: var(--vyre-surface-sunken);
+  border: var(--vyre-border-width-1) solid var(--vyre-border-default);
+  border-radius: var(--vyre-radius-md);
+  box-sizing: border-box;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      border-color var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard),
+      box-shadow   var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard);
+  }
+}
+
+.form__input::placeholder {
+  color: var(--vyre-content-muted);
+}
+
+.form__input:hover {
+  border-color: var(--vyre-border-strong);
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: var(--vyre-border-focus);
+  box-shadow: 0 0 0 var(--vyre-border-width-2) var(--vyre-ring-default);
+}
+
+.form__input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--vyre-surface-muted);
+}
+
+/* ── Error state ─────────────────────────────────────────────────────────── */
+
+.form__field--error .form__input {
+  border-color: var(--vyre-status-danger-solid);
+}
+
+.form__field--error .form__input:focus {
+  border-color: var(--vyre-status-danger-solid);
+  box-shadow: 0 0 0 var(--vyre-border-width-2) var(--vyre-status-danger-subtle);
+}
+
+.form__error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--vyre-space-1);
+  font-size: var(--vyre-font-size-xs);
+  color: var(--vyre-status-danger-subtle-foreground);
+  margin: 0;
+}
+
+.form__error-icon {
+  flex-shrink: 0;
+  margin-block-start: var(--vyre-space-px);
+}
+
+/* ── Help text ───────────────────────────────────────────────────────────── */
+
+.form__help {
+  font-size: var(--vyre-font-size-xs);
+  color: var(--vyre-content-muted);
+  line-height: var(--vyre-font-line-height-normal);
+  margin: 0;
+}
+
+/* ── Password input group ────────────────────────────────────────────────── */
+
+.form__input-group {
+  position: relative;
+  display: flex;
+}
+
+.form__input--password {
+  padding-inline-end: var(--vyre-space-10);
+}
+
+.form__password-toggle {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--vyre-space-3);
+  background: transparent;
+  border: none;
+  color: var(--vyre-content-muted);
+  cursor: pointer;
+  border-start-end-radius: var(--vyre-radius-md);
+  border-end-end-radius: var(--vyre-radius-md);
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: color var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard);
+  }
+}
+
+.form__password-toggle:hover {
+  color: var(--vyre-content-primary);
+}
+
+.form__password-toggle:focus-visible {
+  outline: var(--vyre-border-width-2) solid var(--vyre-ring-default);
+  outline-offset: calc(-1 * var(--vyre-space-0-5));
+  border-radius: var(--vyre-radius-sm);
+}
+
+/* ── Select ──────────────────────────────────────────────────────────────── */
+
+.form__select-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.form__select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  padding-inline: var(--vyre-space-3);
+  padding-block: var(--vyre-space-2);
+  padding-inline-end: var(--vyre-space-8);
+  font-family: var(--vyre-font-family-sans);
+  font-size: var(--vyre-font-size-sm);
+  color: var(--vyre-content-primary);
+  background-color: var(--vyre-surface-sunken);
+  border: var(--vyre-border-width-1) solid var(--vyre-border-default);
+  border-radius: var(--vyre-radius-md);
+  cursor: pointer;
+  box-sizing: border-box;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: border-color var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard);
+  }
+}
+
+.form__select:focus {
+  outline: none;
+  border-color: var(--vyre-border-focus);
+  box-shadow: 0 0 0 var(--vyre-border-width-2) var(--vyre-ring-default);
+}
+
+.form__select-chevron {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: var(--vyre-space-3);
+  margin: auto 0;
+  color: var(--vyre-content-muted);
+  pointer-events: none;
+}
+
+/* ── Checkbox ────────────────────────────────────────────────────────────── */
+
+.form__checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--vyre-space-3);
+  cursor: pointer;
+}
+
+.form__checkbox {
+  flex-shrink: 0;
+  width: var(--vyre-space-4);
+  height: var(--vyre-space-4);
+  margin-block-start: var(--vyre-space-px);
+  accent-color: var(--vyre-interactive-primary);
+  cursor: pointer;
+}
+
+.form__checkbox:focus-visible {
+  outline: var(--vyre-border-width-2) solid var(--vyre-ring-default);
+  outline-offset: var(--vyre-space-0-5);
+}
+
+.form__checkbox-text {
+  font-size: var(--vyre-font-size-sm);
+  color: var(--vyre-content-secondary);
+  line-height: var(--vyre-font-line-height-normal);
+}
+
+/* ── Form actions ────────────────────────────────────────────────────────── */
+
+.form__actions {
+  display: flex;
+  gap: var(--vyre-space-3);
+  padding-block-start: var(--vyre-space-2);
+}
+
+/* ── Required legend ─────────────────────────────────────────────────────── */
+
+.form__required-legend {
+  font-size: var(--vyre-font-size-xs);
+  color: var(--vyre-content-muted);
+  margin: 0;
+}

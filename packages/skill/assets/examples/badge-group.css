@@ -1,0 +1,157 @@
+/*
+ * @component  badge-group
+ * @requires   @gapra/vyre-tokens/css
+ *
+ * ZERO raw values — all visual properties reference var(--vyre-*)
+ */
+
+/* ── Badge group container ───────────────────────────────────────────────── */
+
+.badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--vyre-space-2);
+}
+
+/* ── Base badge ──────────────────────────────────────────────────────────── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--vyre-space-1);
+  padding-inline: var(--vyre-space-2);
+  padding-block: var(--vyre-space-0-5);
+  font-family: var(--vyre-font-family-sans);
+  font-size: var(--vyre-font-size-xs);
+  font-weight: var(--vyre-font-weight-medium);
+  line-height: var(--vyre-font-line-height-normal);
+  border-radius: var(--vyre-radius-full);
+  border: var(--vyre-border-width-1) solid transparent;
+  white-space: nowrap;
+}
+
+/* ── Solid variants ──────────────────────────────────────────────────────── */
+
+.badge--success-solid {
+  background-color: var(--vyre-status-success-solid);
+  color: var(--vyre-status-success-foreground);
+  border-color: var(--vyre-status-success-solid);
+}
+
+.badge--warning-solid {
+  background-color: var(--vyre-status-warning-solid);
+  color: var(--vyre-status-warning-foreground);
+  border-color: var(--vyre-status-warning-solid);
+}
+
+.badge--danger-solid {
+  background-color: var(--vyre-status-danger-solid);
+  color: var(--vyre-status-danger-foreground);
+  border-color: var(--vyre-status-danger-solid);
+}
+
+.badge--info-solid {
+  background-color: var(--vyre-status-info-solid);
+  color: var(--vyre-status-info-foreground);
+  border-color: var(--vyre-status-info-solid);
+}
+
+.badge--neutral-solid {
+  background-color: var(--vyre-content-muted);
+  color: var(--vyre-content-inverse);
+  border-color: var(--vyre-content-muted);
+}
+
+/* ── Subtle variants (preferred for inline status) ───────────────────────── */
+
+.badge--success-subtle {
+  background-color: var(--vyre-status-success-subtle);
+  color: var(--vyre-status-success-subtle-foreground);
+  border-color: var(--vyre-status-success-border);
+}
+
+.badge--warning-subtle {
+  background-color: var(--vyre-status-warning-subtle);
+  color: var(--vyre-status-warning-subtle-foreground);
+  border-color: var(--vyre-status-warning-border);
+}
+
+.badge--danger-subtle {
+  background-color: var(--vyre-status-danger-subtle);
+  color: var(--vyre-status-danger-subtle-foreground);
+  border-color: var(--vyre-status-danger-border);
+}
+
+.badge--info-subtle {
+  background-color: var(--vyre-status-info-subtle);
+  color: var(--vyre-status-info-subtle-foreground);
+  border-color: var(--vyre-status-info-border);
+}
+
+.badge--neutral-subtle {
+  background-color: var(--vyre-surface-muted);
+  color: var(--vyre-content-secondary);
+  border-color: var(--vyre-border-subtle);
+}
+
+/* ── Dot indicator ───────────────────────────────────────────────────────── */
+
+.badge__dot {
+  display: inline-block;
+  width: var(--vyre-space-1-5, 6px);
+  height: var(--vyre-space-1-5, 6px);
+  border-radius: var(--vyre-radius-full);
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+/* ── Tag variant (neutral, removable) ────────────────────────────────────── */
+
+.badge--tag {
+  background-color: var(--vyre-surface-muted);
+  color: var(--vyre-content-secondary);
+  border-color: var(--vyre-border-default);
+  border-radius: var(--vyre-radius-sm);
+  padding-inline-end: var(--vyre-space-1);
+}
+
+.badge__remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--vyre-space-0-5);
+  background: transparent;
+  border: none;
+  border-radius: var(--vyre-radius-xs);
+  color: inherit;
+  opacity: 0.6;
+  cursor: pointer;
+  line-height: 1;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard);
+  }
+}
+
+.badge__remove:hover {
+  opacity: 1;
+}
+
+.badge__remove:focus-visible {
+  outline: var(--vyre-border-width-2) solid var(--vyre-ring-default);
+  outline-offset: var(--vyre-space-0-5);
+  opacity: 1;
+}
+
+/* ── Count badge (numeric, small pill) ───────────────────────────────────── */
+
+.badge--count {
+  min-width: var(--vyre-space-5);
+  height: var(--vyre-space-5);
+  padding-inline: var(--vyre-space-1);
+  justify-content: center;
+  font-size: var(--vyre-font-size-xs);
+  font-weight: var(--vyre-font-weight-bold);
+  border-radius: var(--vyre-radius-full);
+}
