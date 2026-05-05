@@ -4,20 +4,19 @@ This repo is **Vyre**, an AI-native design system. When working in this repo or 
 
 ## Core principles (always apply)
 
-1. **Never hardcode visual values.** No raw hex, no `px` for spacing, no inline font sizes. Always reference tokens.
-2. **Pair every surface with a foreground.** Every background token has a matching `-foreground` token. Never mix arbitrarily.
-3. **Honor cascade layers.** Component styles go in `@layer components`. Utilities last.
-4. **Accessibility is non-negotiable.** Every color combo must pass APCA Lc 60 (text) or Lc 45 (UI). Every interactive element ≥24×24 px target.
-5. **Respect `prefers-reduced-motion`.** Wrap any animation > 200ms in `@media (prefers-reduced-motion: no-preference)`.
+1. **No raw values.** No `#hex`, no `px` for spacing. Always `var(--vyre-*)`.
+2. **Pair surface + foreground.** Every `--vyre-surface-*` has a matching `--vyre-content-*`. Never mix arbitrarily.
+3. **Cascade layers:** `@layer theme, base, components, utilities`. Component styles in `@layer components`.
+4. **Contrast is mandatory.** Body text: APCA Lc 60 / WCAG AA 4.5:1. UI: Lc 45 / 3:1.
+5. **Guard animations.** `@media (prefers-reduced-motion: no-preference)` around any animation > 200ms.
 
 ## When the user asks for UI work
 
-1. Read `packages/skill/SKILL.md` first.
-2. Pick a UI style from `packages/skill/references/styles/_index.json`.
-3. Pick a palette from `packages/skill/references/palettes/_index.json`.
-4. Apply matching rules from `packages/skill/references/ux-rules/_index.json`.
-5. Emit code that uses tokens only.
-6. Run `pnpm --filter @gapra/vyre-tokens validate` to verify.
+1. Pick a UI style from `references/styles/_index.json` (54 options).
+2. Pick a palette from `references/palettes/_index.json` (177 options, tagged).
+3. Load relevant UX rules from `references/ux-rules/_index.json` (90 rules — load on demand, not all at once).
+4. Check the framework adapter in `references/frameworks/`.
+5. Produce token-only code. Run `pnpm lint` before delivering.
 
 ## File conventions
 
@@ -25,9 +24,10 @@ This repo is **Vyre**, an AI-native design system. When working in this repo or 
 - Skill content: `packages/skill/references/**/*.md` with YAML frontmatter
 - Never edit `packages/tokens/dist/` directly — it's generated
 
-## Common pitfalls to avoid
+## Avoid
 
-- Don't combine multiple morphism styles (glass + neu) in one component
-- Don't use `color` in inline styles — always CSS variables
-- Don't generate palettes by guessing OKLCH values — use the generator script
-- Don't skip the `_foreground` pair — accessibility regression
+- Combining morphism styles (glass + neumorphism) in one component.
+- Skipping the `-foreground` pair on any surface — guaranteed a11y regression.
+- Animating `width`, `height`, `top`, `left` — animate `transform` + `opacity` only.
+- Loading all 90 UX rules at once — use the manifest index.
+- Raw hex, px spacing, or inline font sizes anywhere in CSS or style props.

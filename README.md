@@ -17,6 +17,7 @@
 |---|---|
 | [`@gapra/vyre-tokens`](./packages/tokens) | W3C-DTCG design tokens. Single source of truth → CSS / Tailwind / SCSS / JS. |
 | [`@gapra/vyre-skill`](./packages/skill) | The AI Skill itself: `SKILL.md` + 50 styles + 150 palettes + 90 rules as references. |
+| [`@gapra/vyre-linter`](./packages/linter) | Linter CLI + API: DTCG schema validation, broken alias refs, WCAG/APCA contrast audit, UX rule checker. |
 
 ## Quick start
 

@@ -4,7 +4,7 @@ This is the **vyre** monorepo (MVP). Follow these steps to get up and running.
 
 ## 1. Prerequisites
 
-- **Node.js** ≥ 18 (recommended: 20 LTS or 22 LTS)
+- **Node.js** ≥ 20 (recommended: 20 LTS or 22 LTS)
 - **pnpm** ≥ 9.0.0 — install with `npm install -g pnpm@latest`
 
 ## 2. Extract & Install
@@ -35,7 +35,19 @@ node scripts/build.mjs
 # → dist/js/tokens.js + tokens.d.ts
 ```
 
-## 4. Validate Skill Package
+## 4. Run the Linter
+
+```bash
+# From the repo root — runs DTCG schema + alias refs + contrast + UX rules
+pnpm lint
+
+# Or per-check:
+node packages/linter/src/cli.mjs --dtcg    --tokens packages/tokens/src
+node packages/linter/src/cli.mjs --refs    --tokens packages/tokens/src
+node packages/linter/src/cli.mjs --contrast --tokens packages/tokens/src --theme dark
+```
+
+## 5. Validate Skill Package
 
 ```bash
 cd packages/skill
@@ -104,9 +116,13 @@ vyre/
 ├── package.json                    # Workspace root
 ├── pnpm-workspace.yaml
 ├── README.md
-├── AGENTS.md                       # AI agent contract
+├── AGENTS.md                       # AI agent contract (auto-generated — do not edit directly)
+├── CLAUDE.md                       # Claude Code instructions (auto-generated)
 ├── INSTALL.md                      # ← You are here
 ├── LICENSE                         # MIT
+├── .cursor/rules/vyre.mdc          # Cursor rule (auto-generated)
+├── .windsurf/rules/vyre.md         # Windsurf rule (auto-generated)
+├── .github/copilot-instructions.md # Copilot instructions (auto-generated)
 └── packages/
     ├── tokens/                     # vyre-tokens
     │   ├── src/
@@ -115,23 +131,29 @@ vyre/
     │   │   └── palettes/           # 177 generated palette token files
     │   ├── scripts/                # build, validate, generate-palettes
     │   └── dist/                   # CSS, Tailwind, SCSS, JS/TS outputs
-    └── skill/                      # vyre-skill
-        ├── SKILL.md                # Entry point for AI agents
-        ├── references/
-        │   ├── styles/             # 54 UI style recipes
-        │   ├── palettes/           # Palette index (mirrored from tokens)
-        │   ├── ux-rules/           # 90 UX rules across 7 categories
-        │   ├── layout/             # Grid, flex, spacing
-        │   ├── typography/         # Scales, pairing, rhythm
-        │   └── frameworks/         # React, Vue, Svelte, Angular, Tailwind
-        ├── scripts/                # generate-styles, generate-ux-rules, validate-skill
-        ├── evals/                  # 30 should-trigger / should-not-trigger cases
-        └── assets/examples/        # (empty — for future demos)
+    ├── skill/                      # vyre-skill
+    │   ├── SKILL.md                # Entry point for AI agents
+    │   ├── references/
+    │   │   ├── styles/             # 54 UI style recipes
+    │   │   ├── palettes/           # Palette index (mirrored from tokens)
+    │   │   ├── ux-rules/           # 90 UX rules across 7 categories
+    │   │   ├── layout/             # Grid, flex, spacing
+    │   │   ├── typography/         # Scales, pairing, rhythm
+    │   │   └── frameworks/         # React, Vue, Svelte, Angular, Tailwind
+    │   ├── scripts/                # generate-styles, generate-ux-rules, validate-skill
+    │   ├── evals/                  # 30 should-trigger / should-not-trigger cases
+    │   └── assets/examples/        # (empty — for future demos)
+    └── linter/                     # vyre-linter
+        └── src/
+            ├── cli.mjs             # npx vyre-lint entry point
+            ├── dtcg-validator.mjs  # DTCG 2025.10 schema validation
+            ├── reference-resolver.mjs  # broken {alias.ref} detection
+            ├── contrast.mjs        # WCAG 2.2 + APCA Lc computation
+            └── ux-rule-checker.mjs # HTML/JSX UX rule violations
 ```
 
 ## What's Next (Post-MVP)
 
-- `vyre-linter` — lint-style violations
 - `vyre-vscode` — VS Code LSP
 - `vyre-react`, `vyre-vue`, `vyre-svelte` — pre-built component adapters
 - `vyre-figma-tokens` — Figma plugin sync

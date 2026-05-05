@@ -1,0 +1,92 @@
+---
+description: Vyre design system rules. Apply to all UI work — components, styles, tokens, accessibility, theming, layout, typography, color choices, and any visual/UX decisions in any framework.
+globs: ["**/*.css", "**/*.scss", "**/*.tsx", "**/*.jsx", "**/*.vue", "**/*.svelte", "**/*.html", "**/*.tokens.json"]
+alwaysApply: false
+---
+
+# Vyre Design System
+
+You are working with **Vyre**, a token-based AI-native design system. Produce code that uses only design tokens — never hardcode visual values.
+
+## The 5 non-negotiables
+
+1. **No raw values.** No `#hex`, no `px` for spacing. Always `var(--vyre-*)`.
+2. **Pair surface + foreground.** Every `--vyre-surface-*` has a matching `--vyre-content-*`. Never mix arbitrarily.
+3. **Cascade layers:** `@layer theme, base, components, utilities`. Component styles in `@layer components`.
+4. **Contrast is mandatory.** Body text: APCA Lc 60 / WCAG AA 4.5:1. UI: Lc 45 / 3:1.
+5. **Guard animations.** `@media (prefers-reduced-motion: no-preference)` around any animation > 200ms.
+
+## Setup
+
+```css
+@import "@gapra/vyre-tokens/css";
+@import "@gapra/vyre-tokens/themes/dark"; /* optional */
+```
+
+## Token namespaces
+
+| Namespace | Examples |
+|-----------|---------|
+| `--vyre-surface-*` | `background`, `panel`, `card`, `popover`, `subtle`, `muted`, `inverse` |
+| `--vyre-content-*` | `primary`, `secondary`, `tertiary`, `muted`, `disabled`, `link`, `inverse` |
+| `--vyre-interactive-*` | `primary`, `primary-foreground`, `primary-hover`, `secondary-*`, `ghost-*`, `destructive-*` |
+| `--vyre-status-*` | `success-solid`, `success-foreground`, `success-subtle` (same for warning/danger/info) |
+| `--vyre-border-*` | `subtle`, `default`, `strong`, `interactive`, `focus` |
+| `--vyre-space-{0–64}` | 8-px grid. `space-2`=8px, `space-4`=16px, `space-6`=24px |
+| `--vyre-radius-*` | `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`, `full` |
+| `--vyre-shadow-*` | `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `inner` |
+| `--vyre-motion-duration-*` | `instant`, `fast`, `normal`, `slow`, `deliberate` |
+| `--vyre-motion-easing-*` | `standard`, `decelerate`, `accelerate`, `sharp` |
+
+## Common patterns (memorize these)
+
+### Button (token-only)
+```css
+.button {
+  background: var(--vyre-interactive-primary);
+  color: var(--vyre-interactive-primary-foreground);
+  padding: var(--vyre-space-2) var(--vyre-space-4);
+  border-radius: var(--vyre-radius-md);
+  font-weight: var(--vyre-font-weight-medium);
+  transition: background var(--vyre-motion-duration-fast) var(--vyre-motion-easing-standard);
+}
+.button:hover { background: var(--vyre-interactive-primary-hover); }
+.button:focus-visible {
+  outline: 2px solid var(--vyre-ring-default);
+  outline-offset: 2px;
+}
+```
+
+### Card
+```css
+.card {
+  background: var(--vyre-surface-card);
+  border: 1px solid var(--vyre-border-subtle);
+  border-radius: var(--vyre-radius-lg);
+  padding: var(--vyre-space-6);
+  box-shadow: var(--vyre-shadow-sm);
+}
+```
+
+### Tailwind v4 usage
+```html
+<button class="bg-primary text-primary-foreground hover:bg-primary-hover px-4 py-2 rounded-md font-medium">
+  Click me
+</button>
+```
+
+## Workflow for UI requests
+
+1. Pick a UI style from `references/styles/_index.json` (54 options).
+2. Pick a palette from `references/palettes/_index.json` (177 options, tagged).
+3. Load relevant UX rules from `references/ux-rules/_index.json` (90 rules — load on demand, not all at once).
+4. Check the framework adapter in `references/frameworks/`.
+5. Produce token-only code. Run `pnpm lint` before delivering.
+
+## Avoid
+
+- Combining morphism styles (glass + neumorphism) in one component.
+- Skipping the `-foreground` pair on any surface — guaranteed a11y regression.
+- Animating `width`, `height`, `top`, `left` — animate `transform` + `opacity` only.
+- Loading all 90 UX rules at once — use the manifest index.
+- Raw hex, px spacing, or inline font sizes anywhere in CSS or style props.
